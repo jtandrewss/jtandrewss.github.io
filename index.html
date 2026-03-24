@@ -519,7 +519,21 @@ Developments, </i>Ed. P. A. Ling, pp. 149-161 (Nova Science, <st1:State w:st="on
 		</div>
     </div>
 </section>
+<script>
+document.querySelectorAll(".readBtn").forEach(function(btn) {
+  btn.addEventListener("click", function() {
+    var moreText = this.previousElementSibling;
 
+    if (moreText.style.display === "none") {
+      moreText.style.display = "block";
+      this.innerHTML = "Read less";
+    } else {
+      moreText.style.display = "none";
+      this.innerHTML = "Read more";
+    }
+  });
+});
+</script>
     <script src="/js/mathjax-config.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
