@@ -141,9 +141,24 @@
 	<p>Dr. Andrews’ research interests center around Optical Tweezers, Manipulation of nanomaterials, Biomedical Imaging, Non-invasive glucose measurements with Optical coherence tomography, Optical properties of Quantum dots, Quantum Computing, Quantum Circuits, and NDT&E using real-time holography, etc. He actively participates in open-source software development independently. Using LaTeX, openSUSE, Scilab, Gnuplot, etc. since 1998.</p>
 	<p>Details resume is available at:A complete CV is available <a href="/other/CV.pdf" target="_blank">here</a>.</p>
 	</div>
-  <button onclick="toggleContent()" id="readBtn">Read more</button>
+  <button class="readBtn">Read more</button>
 </div>	</div> </div>
   </section>
+	<script>
+document.querySelectorAll(".readBtn").forEach(function(btn) {
+  btn.addEventListener("click", function() {
+    var moreText = this.previousElementSibling;
+
+    if (moreText.style.display === "none") {
+      moreText.style.display = "block";
+      this.innerHTML = "Read less";
+    } else {
+      moreText.style.display = "none";
+      this.innerHTML = "Read more";
+    }
+  });
+});
+</script>
 <section id="teaching" class="home-section wg-blank   " style="padding: 40px 0px 40px 0px;" >
     <div class="container">
 <div class="row">
