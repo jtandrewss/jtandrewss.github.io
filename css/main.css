@@ -20,17 +20,25 @@ a:hover {
     text-decoration: underline;
 }
 h1 {
-    font-size: 3em;
+    font-size: 2em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    color: #701600;
 }
-p {
+h2 {
     font-size: 1.5em;
-    line-height: 1.4em;
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+    color: #4F0070;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.15em;
     color: #333;
 }
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
+    color: #013A59
 }
 
 ul.posts { 
