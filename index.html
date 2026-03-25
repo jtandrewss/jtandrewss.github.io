@@ -12,16 +12,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
-  <link rel="stylesheet" href="/css/tomstyle.css">
-  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="J T Andrews">
-  <link rel="manifest" href="/index.webmanifest">
-  <link rel="icon" type="image/png" href="/images/icon-32.png">
-  <link rel="apple-touch-icon" type="image/png" href="/images/icon-192.png">
-  <link rel="canonical" href="https://jtandrewss.github.io/">
-  <meta property="twitter:card" content="summary">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  	<link rel="stylesheet" href="/css/tomstyle.css">
+  	<link rel="alternate" href="/index.xml" type="application/rss+xml" title="J T Andrews">
+  	<link rel="manifest" href="/index.webmanifest">
+  	<link rel="icon" type="image/png" href="/images/icon-32.png">
+  	<link rel="apple-touch-icon" type="image/png" href="/images/icon-192.png">
+  	<link rel="canonical" href="https://jtandrewss.github.io/">
+	<meta property="twitter:card" content="summary">
   <meta property="og:site_name" content="J T Andrews">
   <meta property="og:url" content="https://jtandrewss.github.io/">
   <meta property="og:title" content="J T Andrews">
@@ -143,23 +143,6 @@
   <button class="readBtn">Read more</button>
 </div>	</div> </div>
   </section>
-<script>
-document.querySelectorAll('.multi-readmore').forEach(container => {
-    const parts = container.querySelectorAll('.part.hidden');
-    const btn = container.querySelector('.readmore-btn');
-    let index = 0;
-
-    btn.addEventListener('click', () => {
-        if (index < parts.length) {
-            parts[index].style.display = 'block';
-            index++;
-        }
-        if (index === parts.length) {
-            btn.style.display = 'none';
-        }
-    });
-});
-</script>
 <section id="teaching" class="home-section wg-blank   " style="padding: 40px 0px 40px 0px;" >
     <div class="container">
 <div class="row">
@@ -560,6 +543,23 @@ document.querySelectorAll(".readBtn").forEach(function(btn) {
       <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="/js/tomstyle.js"></script>
+	<script>
+document.querySelectorAll('.multi-readmore').forEach(container => {
+    const parts = container.querySelectorAll('.part.hidden');
+    const btn = container.querySelector('.readmore-btn');
+    let index = 0;
+
+    btn.addEventListener('click', () => {
+        if (index < parts.length) {
+            parts[index].style.display = 'block';
+            index++;
+        }
+        if (index === parts.length) {
+            btn.style.display = 'none';
+        }
+    });
+});
+</script>
   <div class="container">
     <footer class="site-footer">
   <p class="powered-by">
