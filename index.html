@@ -28,7 +28,35 @@
   <meta property="og:description" content=""><meta property="og:image" content="https://jtandrewss.github.io/images/icon-192.png">
   <meta property="twitter:image" content="https://jtandrewss.github.io/images/icon-192.png"><meta property="og:locale" content="en-us">
     <meta property="og:updated_time" content="2026-03-24T00:00:00&#12;00:00">
-<script type="application/ld+json">
+<style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 800px; margin: 40px auto; padding: 20px; 
+        }
+        .scroll-textarea {
+            width: 100%;
+            height: 300px; /* Fixed height triggers scrollbar */
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            line-height: 1.5;
+            resize: vertical; /* Allow vertical resize only */
+            box-sizing: border-box;
+            overflow-y: auto; /* Vertical scroll only */
+            overflow-x: hidden; /* No horizontal scroll */
+            background: #f9f9f9;
+        }
+        .scroll-textarea:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+        }
+        label {
+            display: block; margin-bottom: 10px; font-weight: bold;
+        }
+    </style>
+	<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite","url": "https://jtandrewss.github.io/"
@@ -131,16 +159,17 @@
   </div>
   <div class="col-12 col-lg-8">
     <h1>Biography</h1>
-	<div class="multi-readmore">
-    <p class="part">Dr. J. T. Andrews obtained his M.Sc. and Ph.D degrees from SGS Institute of Technology & Science (Engineering Discipline, Devi Ahilya University), Indore in 1994 and 1998 respectively. He held faculty positions at SGSITS, Indore as well as at Birla Institute of Technology, - BITS, Mesra, Ranchi. He is presently Professor & Head of Department of Applied Physics and Optoelectronics, SGSITS, Indore. Dean (SW) since 2023 at SGSITS, Indore.</p>
-	<p class="part hidden">Before joining SGSITS, Indore he worked at the Biomedical Application Division of Raja Ramanna Center for Advanced Technology (RRCAT, Indore), Indore,  Institut fur Physik, Humboldt University zu Berlin, Germany and </p>
-	<p class="part hidden">at Birla Institute of Technology, Mesra, Ranchi. He worked for a short spell at Hokkaido University, Sapporo, Japan, and visited major R&D facilities in Europe.</p>
-	<p class="part hidden">He is a recipient of Dr. K. S. Krishnan Award of Department of Atomic Energy, Mumbai and BOYSCAST Award of Department of Science & Technology, GOI, New Delhi, Young Scientist Award from Department of Biotechnology, GoI, New Delhi and nominated for Dr. N. S. Satyamurthy Award of Indian Physics Association.</p>
-	<p class="part hidden">He has published over 75 peer-reviewed international papers and contributed a chapter each in five  books. Ten students have been awarded and four are pursuing for Ph.D. under his Guidance. About 100 students have completed M.Tech/M.Sc. thesis with him as supervisor. More than 2.5 crores of rupees have generated through R&D Projects.</p>
-	<p class="part hidden">Dr. Andrews’ research interests center around Optical Tweezers, Manipulation of nanomaterials, Biomedical Imaging, Non-invasive glucose measurements with Optical coherence tomography, Optical properties of Quantum dots, Quantum Computing, Quantum Circuits, and NDT&E using real-time holography, etc. He actively participates in open-source software development independently. Using LaTeX, openSUSE, Scilab, Gnuplot, etc. since 1998.</p>
-	<p class="part hidden">Details resume is available at:A complete CV is available <a href="/other/CV.pdf" target="_blank">here</a>.</p>
-	</div>
-  <button class="readBtn">Read more</button>
+	<textarea 
+        id="scrollTextarea" 
+        class="scroll-textarea" 
+        placeholder="Paste your long paragraph here... Scrollbar appears automatically."
+		>Dr. J. T. Andrews obtained his M.Sc. and Ph.D degrees from SGS Institute of Technology & Science (Engineering Discipline, Devi Ahilya University), Indore in 1994 and 1998 respectively. He held faculty positions at SGSITS, Indore as well as at Birla Institute of Technology, - BITS, Mesra, Ranchi. He is presently Professor & Head of Department of Applied Physics and Optoelectronics, SGSITS, Indore. Dean (SW) since 2023 at SGSITS, Indore.
+		Before joining SGSITS, Indore he worked at the Biomedical Application Division of Raja Ramanna Center for Advanced Technology (RRCAT, Indore), Indore,  Institut fur Physik, Humboldt University zu Berlin, Germany and at Birla Institute of Technology, Mesra, Ranchi. He worked for a short spell at Hokkaido University, Sapporo, Japan, and visited major R&D facilities in Europe.
+		He is a recipient of Dr. K. S. Krishnan Award of Department of Atomic Energy, Mumbai and BOYSCAST Award of Department of Science & Technology, GOI, New Delhi, Young Scientist Award from Department of Biotechnology, GoI, New Delhi and nominated for Dr. N. S. Satyamurthy Award of Indian Physics Association.
+		He has published over 75 peer-reviewed international papers and contributed a chapter each in five  books. Ten students have been awarded and four are pursuing for Ph.D. under his Guidance. About 100 students have completed M.Tech/M.Sc. thesis with him as supervisor. More than 2.5 crores of rupees have generated through R&D Projects.
+		Dr. Andrews’ research interests center around Optical Tweezers, Manipulation of nanomaterials, Biomedical Imaging, Non-invasive glucose measurements with Optical coherence tomography, Optical properties of Quantum dots, Quantum Computing, Quantum Circuits, and NDT&E using real-time holography, etc. He actively participates in open-source software development independently. Using LaTeX, openSUSE, Scilab, Gnuplot, etc. since 1998.
+		</textarea>
+		Details resume is available at:A complete CV is available <a href="/other/CV.pdf" target="_blank">here</a>.
 </div>	</div> </div>
   </section>
 <section id="teaching" class="home-section wg-blank   " style="padding: 40px 0px 40px 0px;" >
@@ -560,7 +589,15 @@ document.querySelectorAll('.multi-readmore').forEach(container => {
     });
 });
 </script>
-  <div class="container">
+<script>
+        // Optional: Auto-resize height based on content (but keep scrollbar visible)
+        const textarea = document.getElementById('scrollTextarea');
+        textarea.addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = Math.min(this.scrollHeight, 400) + 'px'; // Max 400px
+        });
+    </script>
+	<div class="container">
     <footer class="site-footer">
   <p class="powered-by">
     &copy; 2026 &middot; 
