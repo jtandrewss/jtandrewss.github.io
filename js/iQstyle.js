@@ -1,4 +1,4 @@
-        /* Container for images */
+        /* Container for images in a single row*/
         .image-row {
             display: flex;              /* Places items in a row */
             justify-content: center;    /* Centers them horizontally */
@@ -11,8 +11,8 @@
         .image-row img {
             max-width: auto;  /* Limit width */
             height: 75px;      /* Keep aspect ratio */
-            border: 0px solid #ccc;
-            border-radius: 0px;
+            border: 0px solid #ccc; /* Thickness of the border*/
+            border-radius: 0px; /* Border corner radius = border means circle/ellipse*/
         }	
 
 :root{--ink:#16213e;--ink2:#1a2b5e;--amb:#c47f17;--amb2:#e9a528;--sand:#f5f0e8;--wh:#fff;--muted:#6b7a99;--light:#a8b4cc;--ok:#1d7a47;--okbg:#d2f0e0;--warn:#9a5c00;--warnbg:#fef0cc;--err:#9b1c1c;--errbg:#fde8e8;--ibg:#dbeafe;--ifc:#1e3a8a;--bdr:rgba(22,33,62,.10);--sh:0 2px 16px rgba(22,33,62,.09);--sh2:0 8px 40px rgba(22,33,62,.14);--r:12px;--rl:20px}
