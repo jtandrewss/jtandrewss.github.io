@@ -1,614 +1,602 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Source Themes Academic 4.5.0">
-  <meta name="author" content="J T Andrews">
-  <meta name="description" content="Home Page of Dr J T Andrews">
-  <link rel="alternate" hreflang="en-us" href="https://jtandrewss.github.io/">
-  <meta name="theme-color" content="#2962ff">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
-  	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
-  	<link rel="stylesheet" href="/css/tomstyle.css">
-  	<link rel="alternate" href="/index.xml" type="application/rss+xml" title="J T Andrews">
-  	<link rel="manifest" href="/index.webmanifest">
-  	<link rel="icon" type="image/png" href="/images/icon-32.png">
-  	<link rel="apple-touch-icon" type="image/png" href="/images/icon-192.png">
-  	<link rel="canonical" href="https://jtandrewss.github.io/">
-	<meta property="twitter:card" content="summary">
-  <meta property="og:site_name" content="J T Andrews">
-  <meta property="og:url" content="https://jtandrewss.github.io/">
-  <meta property="og:title" content="J T Andrews">
-  <meta property="og:description" content=""><meta property="og:image" content="https://jtandrewss.github.io/images/icon-192.png">
-  <meta property="twitter:image" content="https://jtandrewss.github.io/images/icon-192.png"><meta property="og:locale" content="en-us">
-    <meta property="og:updated_time" content="2026-03-24T00:00:00&#12;00:00">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hybrid Course Portal</title>
 <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            max-width: 800px; margin: 40px auto; padding: 20px; 
+        /* Container for images */
+        .image-row {
+            display: flex;              /* Places items in a row */
+            justify-content: center;    /* Centers them horizontally */
+            align-items: center;        /* Aligns them vertically */
+            gap: 20px;                   /* Space between images */
+            margin-top: 50px;
         }
-        .scroll-textarea {
-            width: 90%;
-            height: 200px; /* Fixed height triggers scrollbar */
-            padding: 15px;
-            border: 2px solid #ddd;
-            border-radius: 2px;
-            font-size: 14px;
-            line-height: 1.5;
-            /* resize: vertical;  Allow vertical resize only */
-            box-sizing: border-box;
-            overflow-y: auto; /* Vertical scroll only */
-            overflow-x: hidden; /* No horizontal scroll */
-            background: #f9f9f9;
-        }
-        .scroll-textarea:focus {
-            outline: none;
-            border-color: #007bff;
-            box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
-        }
-        label {
-            display: block; margin-bottom: 10px; font-weight: bold;
+
+        /* Make images responsive */
+        .image-row img {
+            max-width: auto;  /* Limit width */
+            height: 75px;      /* Keep aspect ratio */
+            border: 0px solid #ccc;
+            border-radius: 0px;
         }
     </style>
-	<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite","url": "https://jtandrewss.github.io/"
-}
-</script>
-  <title>J T Andrews</title>
+	
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=Lora:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#16213e;--ink2:#1a2b5e;--amb:#c47f17;--amb2:#e9a528;--sand:#f5f0e8;--wh:#fff;--muted:#6b7a99;--light:#a8b4cc;--ok:#1d7a47;--okbg:#d2f0e0;--warn:#9a5c00;--warnbg:#fef0cc;--err:#9b1c1c;--errbg:#fde8e8;--ibg:#dbeafe;--ifc:#1e3a8a;--bdr:rgba(22,33,62,.10);--sh:0 2px 16px rgba(22,33,62,.09);--sh2:0 8px 40px rgba(22,33,62,.14);--r:12px;--rl:20px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Sora',sans-serif;background:var(--sand);color:var(--ink);min-height:100vh;font-size:14px}
+.hidden{display:none!important}
+.badge{display:inline-block;padding:2px 9px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+.bok{background:var(--okbg);color:var(--ok)}.bwarn{background:var(--warnbg);color:var(--warn)}.berr{background:var(--errbg);color:var(--err)}.binfo{background:var(--ibg);color:var(--ifc)}.bneu{background:#e5e7eb;color:#374151}
+
+/* NAV */
+#nav{background:var(--ink);height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem;position:sticky;top:0;z-index:50;box-shadow:0 2px 20px rgba(0,0,0,.3)}
+.nbrand{display:flex;align-items:center;gap:10px}
+.ngem{width:34px;height:34px;background:var(--amb);border-radius:9px;display:flex;align-items:center;justify-content:center;font-family:'Lora',serif;font-size:16px;color:var(--ink);font-weight:600}
+.nname{font-family:'Lora',serif;color:#fff;font-size:16px}.nname em{color:var(--amb2);font-style:normal}
+.nright{display:flex;align-items:center;gap:8px}
+.nchip{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1);border-radius:9px;padding:5px 10px}
+.nav{width:26px;height:26px;border-radius:50%;background:var(--amb);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:var(--ink)}
+.nun{color:#fff;font-size:13px;font-weight:500}.nur{color:rgba(255,255,255,.45);font-size:10px}
+#bout{background:none;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.55);padding:5px 12px;border-radius:8px;cursor:pointer;font-size:12px;font-family:'Sora',sans-serif;transition:.2s}
+#bout:hover{background:rgba(192,57,43,.25);color:#ff8a8a;border-color:rgba(192,57,43,.4)}
+
+/* PAGES */
+.page{display:none;min-height:calc(100vh - 60px)}.page.on{display:block}
+
+/* LOGIN */
+#pg-login{display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--ink);position:relative;overflow:hidden}
+#pg-login::before{content:'';position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(196,127,23,.14) 0%,transparent 70%);top:-200px;right:-200px;border-radius:50%}
+#pg-login::after{content:'';position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(196,127,23,.08) 0%,transparent 70%);bottom:-100px;left:-100px;border-radius:50%}
+.lcard{background:#fff;border-radius:var(--rl);padding:2.5rem;width:430px;position:relative;z-index:1;box-shadow:var(--sh2)}
+.lhdr{text-align:center;margin-bottom:1.75rem}
+.lico{width:66px;height:66px;background:var(--ink);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem}
+.lico svg{width:34px;height:34px;color:var(--amb)}
+.lhdr h1{font-family:'Lora',serif;font-size:22px;color:var(--ink);margin-bottom:3px}
+.lhdr p{color:var(--muted);font-size:13px}
+.ltabs{display:flex;background:var(--sand);border-radius:10px;padding:3px;margin-bottom:1.5rem}
+.ltab{flex:1;text-align:center;padding:8px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:500;color:var(--muted);border:none;background:none;font-family:'Sora',sans-serif;transition:.2s}
+.ltab.on{background:var(--ink);color:#fff;box-shadow:0 2px 8px rgba(22,33,62,.2)}
+.fg{margin-bottom:.9rem}.fl{display:block;font-size:12px;font-weight:600;color:var(--ink);margin-bottom:5px;letter-spacing:.01em}
+.fi{width:100%;padding:10px 13px;border:1.5px solid var(--bdr);border-radius:10px;font-size:13px;font-family:'Sora',sans-serif;color:var(--ink);background:#fff;outline:none;transition:.2s}
+.fi:focus{border-color:var(--ink);box-shadow:0 0 0 3px rgba(22,33,62,.07)}
+.fn{font-size:11px;color:var(--light);margin-top:3px}
+.bp{width:100%;padding:12px;background:var(--ink);color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:500;font-family:'Sora',sans-serif;cursor:pointer;transition:.2s;margin-top:.4rem}
+.bp:hover{background:var(--ink2);transform:translateY(-1px);box-shadow:0 4px 14px rgba(22,33,62,.3)}
+.bs{padding:9px 18px;background:transparent;color:var(--ink);border:1.5px solid var(--ink);border-radius:10px;font-size:13px;font-weight:500;font-family:'Sora',sans-serif;cursor:pointer;transition:.2s}
+.bs:hover{background:var(--sand)}
+.ba{padding:8px 16px;background:var(--amb);color:var(--ink);border:none;border-radius:10px;font-size:13px;font-weight:600;font-family:'Sora',sans-serif;cursor:pointer;transition:.2s}
+.ba:hover{background:var(--amb2)}
+.bsm{padding:5px 12px;font-size:11px;border-radius:8px}
+.bd{padding:5px 12px;background:#fde8e8;color:#9b1c1c;border:none;border-radius:8px;font-size:11px;font-weight:500;font-family:'Sora',sans-serif;cursor:pointer;transition:.2s}
+.bd:hover{background:#fca5a5}
+.ale{padding:9px 12px;border-radius:9px;font-size:12px;margin-bottom:.9rem}
+.ae{background:var(--errbg);color:var(--err);border:1px solid #fca5a5}
+.as2{background:var(--okbg);color:var(--ok);border:1px solid #6ee7a0}
+.ai2{background:var(--ibg);color:var(--ifc);border:1px solid #93c5fd}
+.fup{border:2px dashed var(--bdr);border-radius:10px;padding:1.2rem;text-align:center;cursor:pointer;transition:.2s;position:relative;margin-bottom:.6rem}
+.fup:hover{border-color:var(--ink);background:#f0f2f8}
+.fup input{position:absolute;inset:0;opacity:0;cursor:pointer}
+.fup svg{width:26px;height:26px;color:var(--light);margin-bottom:6px}
+.fup p{font-size:12px;color:var(--muted)}.fup span{font-size:11px;color:var(--light)}
+
+/* APP LAYOUT */
+.alayout{display:grid;grid-template-columns:220px 1fr;min-height:calc(100vh - 60px)}
+.sidebar{background:#fff;border-right:1px solid var(--bdr);padding:1.25rem 0;position:sticky;top:60px;height:calc(100vh - 60px);overflow-y:auto}
+.slbl{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--light);padding:0 1.1rem;margin:1rem 0 .35rem}
+.si{display:flex;align-items:center;gap:9px;padding:8px 1.1rem;color:var(--muted);cursor:pointer;font-size:13px;border:none;background:none;width:100%;text-align:left;font-family:'Sora',sans-serif;transition:.15s;border-left:3px solid transparent}
+.si:hover{background:var(--sand);color:var(--ink)}.si.on{background:#eef2ff;color:var(--ink);font-weight:500;border-left-color:var(--ink)}
+.si svg{width:16px;height:16px;flex-shrink:0}
+.area{padding:1.75rem;max-width:1060px}
+
+/* CARDS */
+.card{background:#fff;border-radius:var(--rl);border:1px solid var(--bdr);padding:1.4rem;margin-bottom:1.4rem}
+.ch{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.1rem;padding-bottom:.9rem;border-bottom:1px solid var(--bdr)}
+.ct{font-family:'Lora',serif;font-size:17px;color:var(--ink)}.cs{font-size:12px;color:var(--light);margin-top:2px}
+.sgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:.9rem;margin-bottom:1.4rem}
+.sc{background:#fff;border-radius:var(--r);border:1px solid var(--bdr);padding:1.1rem;position:relative;overflow:hidden}
+.sc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px}
+.sc-i::after{background:var(--ink)}.sc-a::after{background:var(--amb)}.sc-o::after{background:var(--ok)}.sc-b::after{background:#2563eb}
+.sv{font-size:26px;font-weight:600;color:var(--ink)}.sl{font-size:11px;color:var(--light);text-transform:uppercase;letter-spacing:.05em;margin-top:3px}
+.tw{overflow-x:auto;border-radius:var(--r);border:1px solid var(--bdr)}
+table{width:100%;border-collapse:collapse}thead tr{background:#f8f9fb}
+th{padding:10px 13px;text-align:left;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border-bottom:1px solid var(--bdr)}
+td{padding:11px 13px;font-size:13px;color:var(--ink);border-bottom:1px solid var(--bdr);vertical-align:middle}
+tr:last-child td{border-bottom:none}tr:hover td{background:#fafbfc}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.9rem;margin-bottom:1.4rem}
+.mc{background:#fff;border:1px solid var(--bdr);border-radius:var(--r);padding:1.1rem}
+.mico{font-size:26px;margin-bottom:.6rem}.mname{font-weight:600;font-size:13px;color:var(--ink);margin-bottom:1px}.mhrs{font-size:11px;color:var(--light);margin-bottom:.6rem}
+.pbar{height:5px;background:#e5e7eb;border-radius:3px;overflow:hidden}.pfill{height:100%;border-radius:3px;transition:width .4s}.plbl{font-size:11px;color:var(--light);margin-top:3px}
+.qcard{background:#fff;border:1px solid var(--bdr);border-radius:var(--r);padding:1.1rem;margin-bottom:.9rem}
+.qn{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--light);margin-bottom:5px}
+.qt{font-size:14px;color:var(--ink);margin-bottom:.9rem;line-height:1.5}
+.opts{display:flex;flex-direction:column;gap:6px}
+.opt{display:flex;align-items:center;gap:9px;padding:9px 13px;border:1.5px solid var(--bdr);border-radius:10px;cursor:pointer;transition:.15s;font-size:13px}
+.opt:hover{border-color:var(--ink);background:#eef2ff}.opt.sel{border-color:var(--ink);background:#eef2ff;font-weight:500}
+.opt.correct{border-color:var(--ok);background:var(--okbg);color:var(--ok)}.opt.wrong{border-color:var(--err);background:var(--errbg);color:var(--err)}
+.opt input[type=radio]{accent-color:var(--ink)}
+.cert{background:#fff;border:10px solid var(--ink);border-radius:4px;padding:2.5rem;text-align:center;max-width:660px;margin:0 auto;position:relative;box-shadow:var(--sh2)}
+.cert::before{content:'';position:absolute;inset:7px;border:1.5px solid var(--amb);pointer-events:none}
+.co{font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--light);margin-bottom:.9rem}
+.ct2{font-family:'Lora',serif;font-size:27px;color:var(--ink);margin-bottom:.4rem}
+.cs2{font-size:13px;color:var(--muted);margin-bottom:1.75rem}
+.cpre{font-size:12px;color:var(--light);margin-bottom:.4rem}
+.cn{font-family:'Lora',serif;font-size:24px;color:var(--amb);border-bottom:2px solid var(--amb);display:inline-block;padding:0 1.75rem 3px;margin-bottom:1.25rem}
+.cdesc{font-size:12px;color:var(--muted);max-width:360px;margin:0 auto 1.75rem;line-height:1.6}
+.csigs{display:flex;justify-content:space-around;margin-top:1.75rem}
+.csig{border-top:1.5px solid var(--ink);padding-top:5px;font-size:10px;color:var(--light);text-align:center;min-width:110px}
+.cdate{font-size:11px;color:var(--light);margin-top:1.25rem}
+.movl{position:fixed;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;z-index:200;backdrop-filter:blur(4px)}
+.mbox{background:#fff;border-radius:var(--rl);padding:1.75rem;width:520px;max-width:92vw;max-height:88vh;overflow-y:auto;box-shadow:var(--sh2)}
+.mhdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem}
+.mttl{font-family:'Lora',serif;font-size:18px;color:var(--ink)}
+.mcls{width:30px;height:30px;border-radius:7px;border:none;background:var(--sand);cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:17px}
+.mcls:hover{background:var(--errbg);color:var(--err)}
+#tc{position:fixed;bottom:1.5rem;right:1.5rem;z-index:999;display:flex;flex-direction:column;gap:7px}
+.toast{padding:11px 16px;border-radius:11px;font-size:13px;font-weight:500;box-shadow:var(--sh);display:flex;align-items:center;gap:8px;animation:tin .3s ease;max-width:300px}
+@keyframes tin{from{transform:translateX(80px);opacity:0}to{transform:none;opacity:1}}
+.ts{background:var(--okbg);color:var(--ok);border-left:4px solid var(--ok)}
+.te{background:var(--errbg);color:var(--err);border-left:4px solid var(--err)}
+.ti{background:var(--ibg);color:var(--ifc);border-left:4px solid #2563eb}
+.ph{margin-bottom:1.5rem}.ph h1{font-family:'Lora',serif;font-size:23px;color:var(--ink)}.ph p{font-size:12px;color:var(--light);margin-top:3px}
+.ibox{border-radius:10px;padding:10px 14px;font-size:12px;margin-bottom:1rem;line-height:1.6}
+.ib{background:var(--ibg);color:var(--ifc);border:1px solid #93c5fd}.io{background:var(--warnbg);color:var(--warn);border:1px solid #fcd34d}
+.fr2{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.fsec{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--light);margin:1.25rem 0 .6rem}
+@media(max-width:768px){.alayout{grid-template-columns:1fr}.sidebar{display:none}.fr2{grid-template-columns:1fr}}
+</style>
 </head>
-<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" >
-  <aside class="search-results" id="search">
-  <div class="container">
-    <section class="search-header">
-      <div class="row no-gutters justify-content-between mb-3">
-        <div class="col-6">
-          <h1>Search</h1>
-        </div>
-        <div class="col-6 col-search-close">
-          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
-        </div>
-      </div>
-      <div id="search-box">
-      </div>
-    </section>
-    <section class="section-search-results">
-      <div id="search-hits">
-      </div>
-    </section>
-  </div>
-</aside>
-<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
-  <div class="container">
-      <a class="navbar-brand" href="/">J T Andrews</a>
-      <button type="button" class="navbar-toggler" data-toggle="collapse"
-              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span><i class="fas fa-bars"></i></span>
-      </button>
-    <div class="collapse navbar-collapse" id="navbar">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link " href="/#about" data-target="#about"><span>Home</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="/#teaching" data-target="#teaching"><span>Teaching Materials</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link " href="/#publications" data-target="#publications"><span>Publications</span></a>
-        </li>
-		<li class="nav-item">
-          <a class="nav-link " href="/#writing" data-target="#writing"><span>Popular Texts</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
-        </li>
-      </ul>
-    </div>
+<body>
+
+<nav id="nav" class="hidden">
+  <div class="nbrand"><div class="ngem">HC</div><span class="nname">Hybrid<em>Course</em> Portal</span></div>
+  <div class="nright">
+    <div class="nchip"><div class="nav" id="nav-av">?</div><div><div class="nun" id="nav-un">–</div><div class="nur" id="nav-ur">–</div></div></div>
+    <button id="bout" onclick="logout()">Logout</button>
   </div>
 </nav>
-<span class="js-widget-page d-none"></span>	
-<section id="about" class="home-section wg-about   " style="padding: 20px 0px 20px 0px;" >
-<div class="container">
-  <div class="row">
-    <div class="col-12 col-lg-4">
-      <div id="profile">
-      <img class="portrait" src="/images/avatar-jta.jpg" alt="Avatar">
-      <div class="portrait-title"> <h2>J T Andrews</h2> </div>
-      <ul class="network-icon" aria-hidden="true">
-        <li><a href="https://sgsits.irins.org/profile/63814" target="_blank" rel="noopener"> <i class="ai ai-ideas-repec big-icon"></i></a></li>
-		<li><a href="https://www.researchgate.net/profile/Joseph-Andrews" target="_blank" rel="noopener"><i class="ai ai-researchgate big-icon"></i></a></li>
-		<li><a href="https://scholar.google.com/citations?user=YfawtecAAAAJ&hl=en" target="_blank" rel="noopener"><i class="ai ai-google-scholar big-icon"></i></a></li>
-		<li><a href="https://orcid.org/0000-0002-5762-3810" target="_blank" rel="noopener"><i class="ai ai-orcid big-icon"></i></a></li>
-		<li><a href="https://www.scopus.com/authid/detail.uri?authorId=55664473500" target="_blank" rel="noopener"><i class="ai ai-scopus big-icon"></i></a></li>
-        <li><a href="https://inspirehep.net/authors/2621426" target="_blank" rel="noopener"><i class="ai ai-inspire big-icon"></i></a></li>
-      </ul>
-     </div>
+<div id="tc"></div>
+
+<!-- ═══ LOGIN ═══ -->
+<div id="pg-login" class="page on">
+  <div class="lcard">
+    <div class="lhdr">
+	<div class="image-row">
+        <img src="img/QCMAT.png" alt="COE QC">
+        <img src="img/SGS.png" alt="SGSITS">
+		<img src="img/IPA1.png" alt="IPA">
     </div>
-    <div class="col-12 col-lg-8">
-       <h1>Biography</h1>
-	<textarea id="scrollTextarea" class="scroll-textarea">
-Dr. J. T. Andrews obtained his M.Sc. and Ph.D degrees from SGS Institute of Technology & Science (Engineering Discipline, Devi Ahilya University), Indore in 1994 and 1998 respectively. He held faculty positions at SGSITS, Indore as well as at Birla Institute of Technology, - BITS, Mesra, Ranchi. He is presently Professor & Head of Department of Applied Physics and Optoelectronics, SGSITS, Indore. Dean (SW) since 2023 at SGSITS, Indore.
-Before joining SGSITS, Indore he worked at the Biomedical Application Division of Raja Ramanna Center for Advanced Technology (RRCAT, Indore), Indore,  Institut fur Physik, Humboldt University zu Berlin, Germany and at Birla Institute of Technology, Mesra, Ranchi. He worked for a short spell at Hokkaido University, Sapporo, Japan, and visited major R&D facilities in Europe.
-He is a recipient of Dr. K. S. Krishnan Award of Department of Atomic Energy, Mumbai and BOYSCAST Award of Department of Science & Technology, GOI, New Delhi, Young Scientist Award from Department of Biotechnology, GoI, New Delhi and nominated for Dr. N. S. Satyamurthy Award of Indian Physics Association.
-He has published over 75 peer-reviewed international papers and contributed a chapter each in five  books. Ten students have been awarded and four are pursuing for Ph.D. under his Guidance. About 100 students have completed M.Tech/M.Sc. thesis with him as supervisor. More than 2.5 crores of rupees have generated through R&D Projects.
-Dr. Andrews’ research interests center around Optical Tweezers, Manipulation of nanomaterials, Biomedical Imaging, Non-invasive glucose measurements with Optical coherence tomography, Optical properties of Quantum dots, Quantum Computing, Quantum Circuits, and NDT&E using real-time holography, etc. He actively participates in open-source software development independently. Using LaTeX, openSUSE, Scilab, Gnuplot, etc. since 1998.
-	</textarea>
-	<br> Detailed resume is available at:A complete CV is available <a href="/docs/CV-2026-2.pdf" target="_blank">here</a>.</br>
+	<h1>8-Week Skill Internship on Quantum Computing, Materials, Algorithm and Technology</h1>
+	<p>Center for Excellence in QCMAT @ SGSITS, Indore, Department of Applied Physics, SGSITS, Indore and</p>
+	<p>Indian Physics Association, Indore Chapter</p>
+    </div>
+    <div class="ltabs">
+      <button class="ltab on" onclick="ltab('l',this)">Login</button>
+      <button class="ltab" onclick="ltab('r',this)">Register</button>
+    </div>
+    <div id="pnl-l">
+      <div id="lerr" class="ale ae hidden">Invalid credentials or account not yet approved.</div>
+      <div class="fg"><label class="fl">Email (your username)</label><input type="email" id="le" class="fi" placeholder="you@example.com"/></div>
+      <div class="fg"><label class="fl">Password</label><input type="password" id="lp" class="fi" placeholder="••••••••"/><p class="fn">Password is emailed to you by admin upon approval.</p></div>
+      <button class="bp" onclick="doLogin()">Sign In →</button>
+      <p style="text-align:center;margin-top:.9rem;font-size:11px;color:var(--light)">Demo admin: admin@portal.edu / Admin@2025</p>
+    </div>
+    <div id="pnl-r" class="hidden">
+      <div id="rerr" class="ale ae hidden">Please fill all required fields.</div>
+      <div id="rform">
+        <div class="fr2">
+          <div class="fg"><label class="fl">Full Name *</label><input id="rn" class="fi" placeholder="Your full name"/></div>
+          <div class="fg"><label class="fl">Email * (becomes username)</label><input type="email" id="re" class="fi" placeholder="you@example.com"/></div>
+        </div>
+        <div class="fr2">
+          <div class="fg"><label class="fl">Mobile *</label><input id="rph" class="fi" placeholder="+91 98765 43210"/></div>
+          <div class="fg"><label class="fl">Institute/College</label><input id="ro" class="fi" placeholder="Your institution"/></div>
+        </div>
+        <div class="fr2">
+          <div class="fg"><label class="fl">Degree Pursuing:</label>
+			<select name="degree" id="cars">
+			  <option value="B.Tech./B.E.">B.Tech./B.E.</option>
+			  <option value="M.Tech./M.E.">M.Tech./M.E.</option>
+			  <option value="M.Sc.">M.Sc.</option>
+			  <option value="Others">Others</option>
+			</select></div>
+			<div class="fg"><label class="fl">Year of Study:</label>
+			<select name="year" id="year">
+			  <option value="1">I Year</option>
+			  <option value="2">II Year</option>
+			  <option value="3">III Year</option>
+			</select></div>
+        </div>
+        <div class="fg"><label class="fl">Why would you like to attend? (Max 100 words)</label><textarea id="rs" class="fi" rows="3" placeholder="Why do you want to attend this internship?"></textarea></div>
+		<div class="fg"><label class="fl">What are your expectations? (Max 100 words)</label><textarea id="rs" class="fi" rows="3" placeholder="What do you expect to learn from this internship?"></textarea></div>
+        <div class="fg"><label class="fl">Transaction id?</label><textarea id="rs" class="fi" rows="1" placeholder="Share transaction id here!"></textarea></div>
+		<p class="fsec">📎Please, upload the screenshot of transcation (PDF/JPG/PNG only).</p>
+        <div class="fup" onclick="document.getElementById('fid').click()">
+          <input type="file" id="fid" accept=".pdf,.jpg,.png" onchange="fsel(this,'fidn')"/>
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m6.75 12l-3-3m0 0l-3 3m3-3v6m-1.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          <p>Screenshot of transaction.</p><span id="fidn">PDF, JPG or PNG</span>
+        </div>
+		<input type="radio" id="Declaration" name="choice" value="1">
+		<label for="option1">Declaration: By submitting this form, I confirm that the registration fee is non-refundable and I do commit to attend the course in its entirety.</label>
+        <button class="bp" style="margin-top:1.2rem" onclick="subReg()">Submit Application →</button>
+      </div>
+      <div id="rok" class="hidden" style="text-align:center;padding:2rem 0">
+        <div style="width:60px;height:60px;background:var(--okbg);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto .9rem"><svg fill="none" viewBox="0 0 24 24" stroke="var(--ok)" stroke-width="2.5" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></div>
+        <h2 style="font-family:'Lora',serif;color:var(--ink);margin-bottom:.4rem">Application Submitted!</h2>
+        <p style="color:var(--muted);font-size:13px;line-height:1.6">Dear Student, thank you for your interest in iQCMAT program. Your application is under review. Once approved, the admin will email your login credentials to the address you provided.</p>
+        <div class="ibox io" style="margin-top:1rem;text-align:left"><strong>Note:</strong> Please upload supporting documents to the OneDrive link that will be shared with you by the admin, or email them directly to the coordinator.</div>
+        <button class="bs" style="margin-top:.9rem" onclick="ltab('l',document.querySelector('.ltab'))">Back to Login</button>
+      </div>
     </div>
   </div>
 </div>
-</section>
-<section id="teaching" class="home-section wg-blank   " style="padding: 40px 0px 40px 0px;" >
-    <div class="container">
-<div class="row">
-    <div class="col-12 col-lg-4 section-heading">
-      <h1>Teaching and Support Material</h1>
-    </div>
-    <div class="col-12 col-lg-8">
-<h2 id="PH10009:Applied Physics">PH10009: Applied Physics</h2>
-<p>Class Notes for Undergraduate Physics and Applied Physics Course.</p>
-<ul>
-    <li><a href="/ClassNotes/PH10009-FO.pdf">PH10009 - UNIT 2: FIBER OPTICS</a></li>
-    <li><a href="/ClassNotes/PH10009-QM.pdf">PH10009 - UNIT 4: QUANTUM MECHANICS</a></li>
-    <li><a href="/ClassNotes/PH10009-QC.pdf">PH10009 - UNIT 5: QUANTUM COMPUTING</a></li>    
-</ul>
-<h2 id="MST Question Papers">Mid Term Test Question Papers and Answers</h2>
-<ul>
-	<li><a href="/QuesPap/PH10009A-BTech-MST1-2025-SEP.pdf">PH10009 - MST1 - SEP-2025</a></li>
-    <li><a href="/QuesPap/PH10009A-BTech-MST2-2025-Nov.pdf">PH10009 - MST2 - NOV-2025</a></li>
-    <li><a href="/QuesPap/PH10009A-BTech-MST1-2026-FEB.pdf">PH10009 - MST1 - FEB-2026</a></li>
-    <li><a href="/QuesPap/PH10009A-BTech-MST2-2026-MAR.pdf">PH10009 - MST2 - MAR-2026</a></li>    
-</ul>
-<h2 id="END Question Papers">End Semester Question Papers, Answers and Rubrics</h2>
-<ul>
-	<li><a href="/QuesPap/PH10009A-BTech-END-2025-DEC.pdf">PH10009 - END Sem Exam - DEC-2025</a></li>
-	<li><a href="/QuesPap/PH10009A-BTech-END-2025-DEC.pdf">PH10018 - END Sem Exam - DEC-2025</a></li>
-	<li><a href="/QuesPap/PH10009A-BTech-END-2025-DEC.pdf">PH10017 - END Sem Exam - DEC-2025</a></li>
-	<li><a href="/QuesPap/PH10009A-BTech-END-2025-DEC.pdf">PH10009 - END Sem Exam - DEC-2025</a></li>
-</ul>
-<h2 id="Links to Text">Other opensource books relevant to PH10009: Applied Physics</h2>
-<ul>
-    <li><a href="https://libguides.uml.edu/physics_research/books">FREE: OER Repositories: General Physics Books</a></li>
-    <li><a href="https://collection.bccampus.ca/textbook/Ba8b98By/">FREE: College Physics, Chap 28 (STR) 29 (QM)</a></li>
-    <li><a href="https://phys.libretexts.org/Bookshelves/University_Physics/University_Physics_(OpenStax)/University_Physics_III_-_Optics_and_Modern_Physics_(OpenStax)">FREE: University Physics -III Chap. 5, 6, 7 (STR & QM)</a></li>
-    <li><a href="https://phys.libretexts.org/Bookshelves/Optics/BSc_Optics_(Konijnenberg_Adam_and_Urbach)">FREE: Optics : Chap. 7 Lasers </a></li>
-    <li><a href="https://utrgv.libguides.com/physics/OER#:~:text=MIT%20Open%20Courseware%20%2D%20MIT%20OpenCourseWare%20(OCW),publication%20of%20virtually%20all%20MIT%20course%20content.">Physics: Open Educational Resources </a></li>
-    <li><a href="https://github.com/manjunath5496/Quantum-Computing-Books">Books on Quantum Computers: Suggested -> quc(11), quc(19), quc(20), quc(23) </a></li>
-    <li><a href="https://open.umn.edu/opentextbooks/subjects/physics">FREE: Open Textbook Library </a></li>
-    <li><a href="https://openaccesstexts.com/physics/">FREE: Open Text Books</a></li>
-</ul>
-    </div>
+
+<!-- ═══ DASHBOARD ═══ -->
+<div id="pg-dash" class="page">
+  <div class="alayout">
+    <aside class="sidebar" id="sb"></aside>
+    <main class="area" id="area"></main>
+  </div>
 </div>
-    </div>
-  </section>
 
-<section id="publications" class="home-section wg-blank   " style="padding: 40px 0px 40px 0px;" >
-	<div class="container">
-		<div class="row">
-			<div class="col-12 col-lg-4 section-heading">
-				<h1>List of Publications in Peer-Reviewed Journals</h1>
-			</div>
-			<div class="col-12 col-lg-8">
-				<h2 id="PH10009:Applied Physics">Not updated after 2005</h2>
-				<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:18.0pt;text-align:justify;text-indent:-18.0pt'><span
-style='font-size:11.0pt;font-family:Arial'>1.</span><span style='font-size:
-7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='font-size:11.0pt;
-font-family:Arial'>P. Sen and<b> J. Thomas Andrews</b> (1995) Rabi oscillations
-in <st1:stockticker w:st="on">III</st1:stockticker>-V semiconductors,<span
-class=GramE>&nbsp; <st1:place w:st="on"><st1:PlaceName w:st="on"><i><span
-  style='color:red'>Solid</span></i></st1:PlaceName><span style='color:red'> </span><st1:PlaceType
- w:st="on"><i><span style='color:red'>State</span></i></st1:PlaceType></st1:place><i><span
-style='color:red'> </span></i></span><span class=SpellE><i><span
-style='color:red'>Commun</span></i></span>., <b>90</b>, 117-120.</span></p>
+<!-- MODAL -->
+<div id="movl" class="movl hidden" onclick="cmif(event)">
+  <div class="mbox"><div class="mhdr"><span class="mttl" id="mttl">–</span><button class="mcls" onclick="cm()">✕</button></div><div id="mb"></div></div>
+</div>
 
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:18.0pt;text-align:justify;text-indent:-18.0pt'><span class=GramE><span
-style='font-size:11.0pt;font-family:Arial'>2.</span><span style='font-size:
-7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span style='font-size:11.0pt;
-font-family:Arial'>J. Thomas Andrews</span></b><span style='font-size:11.0pt;
-font-family:Arial'>, P. Sen and <span class=SpellE>P.K</span>. Sen (1995)
-Effect of magnetic field on Rabi oscillations in <st1:stockticker w:st="on">III</st1:stockticker>-V
-semiconductors, <i><span style='color:red'>Nonlinear Optic</span>s</i>, <b>12</b>,
-327-337.</span></span><span style='font-size:11.0pt;font-family:Arial'> </span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:18.0pt;text-align:justify;text-indent:-18.0pt'><span class=GramE><span
-style='font-size:11.0pt;font-family:Arial'>3.</span><span style='font-size:
-7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span style='font-size:11.0pt;
-font-family:Arial'>J. Thomas Andrews</span></b><span style='font-size:11.0pt;
-font-family:Arial'> and P. Sen (1998) Stark shift and self energy correction in
-<span class=SpellE>noncentrosymmetric</span> systems, <i><span
-style='color:red'>Nonlinear Optics</span></i>, <b>19</b>, 177-188.</span></span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:18.0pt;text-align:justify;text-indent:-18.0pt'><span
-style='font-size:11.0pt;font-family:Arial'>4.</span><span style='font-size:
-7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span style='font-size:11.0pt;
-font-family:Arial'>J. Thomas Andrews</span></b><span style='font-size:11.0pt;
-font-family:Arial'> and P. Sen (1998) Effect of <span class=SpellE>noncentrosymmetry</span>
-on stark broadening in bulk Indium <span class=SpellE>Antimonide</span>
-crystal, <i><span style='color:red'>J. Quantum and <span class=SpellE>Semiclassical</span>
-Optics</span></i>, <b>10</b>, 663-669.</span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:18.0pt;text-align:justify;text-indent:-18.0pt'><span
-style='font-size:11.0pt;font-family:Arial'>5.</span><span style='font-size:
-7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span style='font-size:11.0pt;
-font-family:Arial'>J. Thomas Andrews</span></b><span style='font-size:11.0pt;
-font-family:Arial'>, P. Sen and P. K. Sen (1998) Theory of free induction
-decay, <span class=SpellE><i><span style='color:red'>Ind</span></i></span><i><span
-style='color:red'>. J. Pure and Applied Physics</span>,<span class=GramE>&nbsp;
-<b><span style='font-style:normal'>36</span></b></span></i>, 655-660.</span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:18.0pt;text-align:justify;text-indent:-18.0pt'><span
-style='font-size:11.0pt;font-family:Arial'>6.</span><span style='font-size:
-7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span style='font-size:11.0pt;
-font-family:Arial'>J. Thomas Andrews</span></b><span style='font-size:11.0pt;
-font-family:Arial'>, P. Sen and R. R. <span class=SpellE>Puri</span> (1999)
-Optical absorption spectra of a quantum dot in a <span class=SpellE>microcavity</span>,
-<i><span style='color:red'>J. Physics B</span></i><span style='color:red'>, <i>Condensed
-Matter</i></span><i>, </i><b>11</b>, 6287-6300.</span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:18.0pt;text-align:justify;text-indent:-18.0pt'><span
-style='font-size:11.0pt;font-family:Arial'>7.</span><span style='font-size:
-7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span style='font-size:11.0pt;
-font-family:Arial'>J. Thomas Andrews</span></b><span style='font-size:11.0pt;
-font-family:Arial'> and P. Sen (1999) Optical <span class=SpellE>nutation</span>
-and free induction decay in magnetized narrow gap <st1:stockticker w:st="on">III</st1:stockticker>-V
-semiconductors, <i><span style='color:red'>J. Nonlinear Optical Phys. <span
-class=GramE>And Materials<span style='color:windowtext;font-style:normal'> <b>8</b>,
-431-441.</span></span></span></i></span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:18.0pt;text-align:justify;text-indent:-18.0pt'><span class=GramE><span
-style='font-size:11.0pt;font-family:Arial'>8.</span><span style='font-size:
-7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span style='font-size:11.0pt;
-font-family:Arial'>J. Thomas Andrews</span></b><span style='font-size:11.0pt;
-font-family:Arial'> and P. Sen (1999) Absorption spectra of small semiconductor
-quantum dots, <span class=SpellE><i><span style='color:red'>Superlattice</span></i></span><i><span
-style='color:red'> and Nanostructures</span>,</i> <b>26</b>, 171-180<i>.</i></span></span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:18.0pt;text-align:justify;text-indent:-18.0pt'><span
-style='font-size:11.0pt;font-family:Arial;color:black'>9.</span><span
-style='font-size:7.0pt;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
-style='font-size:11.0pt;font-family:Arial;color:black'>P. Sen and <b>J. Thomas
-Andrews, </b></span><i><span style='font-size:11.0pt;font-family:Arial;
-color:red'>Proc. <span class=SpellE>SPIE</span></span></i><i><span
-style='font-size:11.0pt;font-family:Arial;color:black'> Vol. 3624, p. 57-66,</span></i><i><span
-style='font-size:11.0pt;font-family:Arial;color:red'> <span class=SpellE>Ultrafast</span>
-Phenomena in Semiconductors <st1:stockticker w:st="on">III</st1:stockticker>,</span></i><i><span
-style='font-size:11.0pt;font-family:Arial;color:black'> Kong T. <span
-class=SpellE>Tsen</span>; Ed.</span></i><span style='font-size:11.0pt;
-font-family:Arial;color:black'>, (<span class=SpellE>SPIE</span>,&nbsp; San <span
-class=SpellE>Fransisco</span>, 1999).</span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:18.0pt;text-align:justify;text-indent:-18.0pt'><span
-style='font-size:11.0pt;font-family:Arial'>10.</span><span style='font-size:
-7.0pt'>&nbsp; </span><span class=SpellE><span style='font-size:11.0pt;
-font-family:Arial'>Harneet</span></span><span style='font-size:11.0pt;
-font-family:Arial'> K. <span class=SpellE>Gahir</span>, Pratima Sen. <b>J.
-Thomas Andrews</b> and <span class=SpellE>Ravindra</span> R. <span
-class=SpellE>Puri</span> (2000) Effect of polarisation state on Squeezed state
-generation in <span class=SpellE>GaAs</span>, <i><span style='color:red'>J.
-Quant. &amp; <span class=SpellE>Semiclassical</span> Optics</span></i>, <b>2</b>,
-1-10.</span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:18.0pt;text-align:justify;text-indent:-18.0pt'><span
-style='font-size:11.0pt;font-family:Arial;color:black'>11.</span><span
-style='font-size:7.0pt;color:black'>&nbsp; </span><b><span style='font-size:
-11.0pt;font-family:Arial;color:black'>J. Thomas Andrews </span></b><span
-style='font-size:11.0pt;font-family:Arial;color:black'>and P. Sen, </span><span
-style='font-size:11.0pt;font-family:Arial;color:red'>Proc. <span class=SpellE>SPIE</span></span><span
-style='font-size:11.0pt;font-family:Arial;color:black'> Vol. 3933, p. 14-23, </span><i><span
-style='font-size:11.0pt;font-family:Arial;color:red'>Laser Applications in
-Microelectronic and Optoelectronic Manufacturing</span></i><span
-style='font-size:11.0pt;font-family:Arial;color:red'> V</span><span
-style='font-size:11.0pt;font-family:Arial;color:black'>, Henry <span
-class=SpellE>Helvajian</span>; Koji Sugioka; Malcolm C. Gower; Jan J. <span
-class=SpellE>Dubowski</span>; Eds. (<span class=SpellE>SPIE</span>,&nbsp; San <span
-class=SpellE>Fransisco</span>, 2000).</span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:18.0pt;text-align:justify;text-indent:-18.0pt'><span
-style='font-size:11.0pt;font-family:Arial;color:black'>12.</span><span
-style='font-size:7.0pt;color:black'>&nbsp; </span><b><span style='font-size:
-11.0pt;font-family:Arial;color:black'>J. Thomas Andrews</span></b><span
-style='font-size:11.0pt;font-family:Arial;color:black'>, and P. K. Sen, <i>&nbsp;</i></span><i><span
-style='font-size:11.0pt;font-family:Arial;color:red'>Proc. <span class=SpellE>SPIE</span></span></i><i><span
-style='font-size:11.0pt;font-family:Arial;color:black'> Vol. 3928, p. 234-244, </span></i><i><span
-style='font-size:11.0pt;font-family:Arial;color:red'>Nonlinear Materials,
-Devices, and Applications</span></i><i><span style='font-size:11.0pt;
-font-family:Arial;color:black'>, Jeffrey W. Pierce; Ed.</span></i><span
-style='font-size:11.0pt;font-family:Arial;color:black'> (<span class=SpellE>SPIE</span>,&nbsp;
-San <span class=SpellE>Fransisco</span>, 2000).</span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:18.0pt;text-align:justify;text-indent:-18.0pt'><span
-style='font-size:11.0pt;font-family:Arial;color:black'>13.</span><span
-style='font-size:7.0pt;color:black'>&nbsp; </span><b><span style='font-size:
-11.0pt;font-family:Arial;color:black'>J. Thomas Andrews</span></b><span
-style='font-size:11.0pt;font-family:Arial;color:black'>, and P. K. Sen, <i>&nbsp;</i></span><i><span
-style='font-size:11.0pt;font-family:Arial;color:red'>Proc. <span class=SpellE>SPIE</span>
-Vol. 3927, p. 52-62, Optical Pulse and Beam Propagation II</span></i><i><span
-style='font-size:11.0pt;font-family:Arial;color:black'>, <span class=SpellE>Yehuda</span>
-B. Band; Ed.</span></i><span style='font-size:11.0pt;font-family:Arial;
-color:black'> (<span class=SpellE>SPIE</span>,&nbsp; San <span class=SpellE>Fransisco</span>,
-2000).</span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:18.0pt;text-align:justify;text-indent:-18.0pt'><span
-style='font-size:11.0pt;font-family:Arial'>14.</span><span style='font-size:
-7.0pt'>&nbsp; </span><span style='font-size:11.0pt;font-family:Arial'>P. K. Sen
-and <b>J. Thomas Andrews </b>(2001)<b> </b>Pump-probe absorption
-characteristics of small quantum dots, <span class=SpellE><i><span
-style='color:red'>Superlattice</span></i></span><i><span style='color:red'> and
-Nanostructures</span>,</i> <b>29</b>, 287 – 300.</span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:21.6pt;text-align:justify;text-indent:-21.6pt'><span
-style='font-size:11.0pt;font-family:Arial'>15.</span><span style='font-size:
-7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span><span style='font-size:11.0pt;
-font-family:Arial'>P. Sen and <b>J. Thomas Andrews</b> (2001) Steady state
-nonlinear gain in small quantum dots,<i> <st1:place w:st="on"><st1:PlaceName
- w:st="on"><span style='color:red'>Solid</span></st1:PlaceName><span
- style='color:red'> <st1:PlaceType w:st="on">State</st1:PlaceType></span></st1:place><span
-style='color:red'> <span class=SpellE>Commun</span>.</span> </i><b>120</b>,
-195-200.</span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:21.6pt;text-align:justify;text-indent:-21.6pt'><span class=GramE><span
-style='font-size:11.0pt;font-family:Arial'>16.</span><span style='font-size:
-7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span style='font-size:11.0pt;
-font-family:Arial'>J. Thomas Andrews</span></b><span style='font-size:11.0pt;
-font-family:Arial'>, H. S. Patel and P. K. Gupta (2002) A novel scanning
-technique for Optical coherence tomography, <i><span style='color:red'>J.
-Optics</span>, </i><b>30</b>, 151-157.</span></span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:21.6pt;text-align:justify;text-indent:-21.6pt'><span
-style='font-size:11.0pt;font-family:Arial'>17.</span><span style='font-size:
-7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span style='font-size:11.0pt;
-font-family:Arial'>J. Thomas Andrews </span></b><span style='font-size:11.0pt;
-font-family:Arial'>and P. Sen (2002) Nonlinear Absorption in semiconductor
-quantum dots, <i><span style='color:red'>J. <span class=SpellE>Appl</span>.
-Physics</span>., </i><b>91 </b>2877-2882 (2002).</span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:21.6pt;text-align:justify;text-indent:-21.6pt'><span
-style='font-size:11.0pt;font-family:Arial'>18.</span><span style='font-size:
-7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span style='font-size:11.0pt;
-font-family:Arial'>J. Thomas Andrews </span></b><span style='font-size:11.0pt;
-font-family:Arial'>and P. Sen (2002) Nonlinear Absorption in semiconductor
-quantum dots,<i> <span style='color:red'>Virtual J. <span class=SpellE>Nanoscale</span>
-Science &amp; Technology</span>, </i><b>5, </b><st1:date ls="trans" Month="3"
-Day="11" Year="2002" w:st="on">March 11, 2002</st1:date>.</span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:18.0pt;text-align:justify;text-indent:-18.0pt'><span
-style='font-size:11.0pt;font-family:Arial'>19.</span><span style='font-size:
-7.0pt'>&nbsp; </span><span style='font-size:11.0pt;font-family:Arial'>S. K. <span
-class=SpellE>Mohanty</span>, <b>J. Thomas Andrews</b> and P. K. Gupta (2002)
-Optical binding in a line trap <i><span style='color:red'>Optics Express</span><span
-style='color:black'>, </span></i><b><span style='color:black'>12 </span></b>2746<span
-style='color:black'> - 2753 (2004)</span>.</span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:18.0pt;text-align:justify;text-indent:-18.0pt'><span
-style='font-size:11.0pt;font-family:Arial'>20.</span><span style='font-size:
-7.0pt'>&nbsp; </span><span style='font-size:11.0pt;font-family:Arial'>R. K.
-Paul, K. Bose,&nbsp; <b>J. T. Andrews</b> &amp; P. K. Barhai (2005) <span
-style='color:black'>Errors in Abel inversion transformations, </span><i><span
-style='color:red'>Plasma Devices &amp; Applications</span><span
-style='color:black'>, </span></i><b><span style='color:black'>13, </span></b><span
-style='color:black'>281 - 289<b> </b>(2005)</span></span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:18.0pt;text-align:justify;text-indent:-18.0pt'><span
-style='font-size:11.0pt;font-family:Arial'>21.</span><span style='font-size:
-7.0pt'>&nbsp; </span><span style='font-size:11.0pt;font-family:Arial'>I. A. <span
-class=SpellE>Akimov</span>, <b>J. T. Andrews</b> &amp; F. <span class=SpellE>Henneberger</span>
-(2006) <span style='color:black'>Stimulated emission from the <span
-class=SpellE>biexciton</span> in a single quantum dot </span><i><span
-style='color:red'>Phys. Rev. <span class=SpellE>Lett</span></span><span
-style='color:black'>.,</span></i><b><span style='color:black'> 96, </span></b><span
-style='color:black'>067401.</span></span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:18.0pt;text-align:justify;text-indent:-18.0pt'><span
-style='font-size:11.0pt;font-family:Arial'>22.</span><span style='font-size:
-7.0pt'>&nbsp; </span><span style='font-size:11.0pt;font-family:Arial'>R.
-Poddar, S. R. Sharma, K. Bose, P. Sen &amp; <b>J. T. Andrews</b> (2006) <span
-style='color:black'>Understanding laser modes using Optical Coherence
-Tomography </span><i><span style='color:red'>Am. J. Physics</span><span
-style='color:black'> </span></i><span style='color:black'>(In Press). </span></span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:18.0pt;text-align:justify;text-indent:-18.0pt'><span
-style='font-size:11.0pt;font-family:Arial'>23.</span><span style='font-size:
-7.0pt'>&nbsp; </span><span style='font-size:11.0pt;font-family:Arial'>K. Bose,
-P. K. Barhai &amp; <b>J. T. Andrews</b><span style='color:black'> (2006)
-Digital real-time holography for fault detection, </span><i><span
-style='color:red'>Int. J. Mat. Research</span><span style='color:black'> </span></i><span
-class=GramE><span style='color:black'>( Communicated</span></span><span
-style='color:black'>). </span></span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:18.0pt;text-align:justify;text-indent:-18.0pt'><span class=GramE><span
-style='font-size:11.0pt;font-family:Arial'>24.</span><span style='font-size:
-7.0pt'>&nbsp; </span><span style='font-size:11.0pt;font-family:Arial'>R.
-Poddar, S. R. Sharma, P. Sen &amp; <b>J. T. Andrews</b> (2006) <span
-style='color:black'>Measurement of scattering coefficient with blood glucose
-concentration using diffuse reflectance, </span><span class=SpellE><i><span
-style='color:red'>Diabetologia</span></i></span><span style='color:black'>
-(Communicated).</span></span></span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:18.0pt;text-align:justify;text-indent:-18.0pt'><span class=GramE><span
-style='font-size:11.0pt;font-family:Arial'>25.</span><span style='font-size:
-7.0pt'>&nbsp; </span><span style='font-size:11.0pt;font-family:Arial'>K. Bose,
-P. K. Barhai &amp; <b>J. T. Andrews</b> (2006)<span style='color:black'>
-Measurement of plasma parameters using digital <span class=SpellE>interferometry</span>
-</span><i><span style='color:red'>J. Phys. D: <span class=SpellE>Appl</span>.
-Physic</span><span style='color:black'>s</span></i><span style='color:black'>
-(Communicated).</span></span></span></p>
-
-<p class=MsoHeading7 align=center style='margin-top:0cm;margin-right:0cm;
-margin-bottom:3.0pt;margin-left:21.75pt;text-align:center'><span lang=EN-US
-style='font-size:11.0pt;color:blue;mso-ansi-language:EN-US;font-style:normal'>Book
-Publications: (Contributed one chapter to the following books)</span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:21.6pt;text-align:justify;text-indent:-21.6pt'><span
-style='font-size:11.0pt;font-family:Arial;color:black'>26.</span><span
-style='font-size:7.0pt;color:black'>&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
-style='font-size:11.0pt;font-family:Arial;color:black'>J. Thomas Andrews</span></b><span
-style='font-size:11.0pt;font-family:Arial;color:black'>, P. Sen and P. K. Sen
-in <i>Computers and Devices for Communication</i> ed. S. <span class=SpellE>Dhar</span>
-and A. K. <span class=SpellE>Das</span> Gupta, (Allied, New Delhi, 1998). </span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:21.6pt;text-align:justify;text-indent:-21.6pt'><span
-style='font-size:11.0pt;font-family:Arial;color:black'>27.</span><span
-style='font-size:7.0pt;color:black'>&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
-style='font-size:11.0pt;font-family:Arial;color:black'>J. Thomas Andrews</span></b><span
-style='font-size:11.0pt;font-family:Arial;color:black'>, P. Sen and R. R. <span
-class=SpellE>Puri</span> in <i>Fiber Optical Communication, ed. A. K. <span
-class=SpellE>Ghatak</span> and A. Sharma </i>(Viva, New Delhi, 1998).</span></p>
-
-<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:3.0pt;
-margin-left:21.6pt;text-align:justify;text-indent:-21.6pt'><span
-style='font-size:11.0pt;font-family:Arial;color:black'>28.</span><span
-style='font-size:7.0pt;color:black'>&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
-style='font-size:11.0pt;font-family:Arial;color:black'>J. Thomas Andrews</span></b><span
-style='font-size:11.0pt;font-family:Arial;color:black'>, Quantum Optical
-Phenomena in Semiconductor Quantum Dots in <i>Quantum Dots: Research
-Developments, </i>Ed. P. A. Ling, pp. 149-161 (Nova Science, <st1:State w:st="on"><st1:place
- w:st="on">New York</st1:place></st1:State>, 2005)</span></p>
-			</div>
-		</div>
-    </div>
-</section>
-
-<section id="writing" class="home-section wg-blank   " style="padding: 40px 0px 40px 0px;" >
-	<div class="container">
-		<div class="row">
-			<div class="col-12 col-lg-4 section-heading">
-				<h1>Popular Texts</h1>
-			</div>
-			<div class="col-12 col-lg-8">
-				<h2 id="PH10009:Applied Physics">PH10009: Applied Physics</h2>
-				<p>Class Notes for Undergraduate Physics and Applied Physics Course.</p>
-					<ul>
-						<li><a href="/ClassNotes/PH10009-FO.pdf">PH10009 - UNIT 2: FIBER OPTICS</a></li>
-						<li><a href="/ClassNotes/PH10009-QM.pdf">PH10009 - UNIT 4: QUANTUM MECHANICS</a></li>
-						<li><a href="/ClassNotes/PH10009-QC.pdf">PH10009 - UNIT 5: QUANTUM COMPUTING</a></li>    
-					</ul>
-			</div>
-		</div>
-    </div>
-</section>
 <script>
-document.querySelectorAll(".readBtn").forEach(function(btn) {
-  btn.addEventListener("click", function() {
-    var moreText = this.previousElementSibling;
+// ═══ DATA (maps to CourseData.xlsx on OneDrive in production) ═══
+const DB={
+  mod:[
+    {id:"M1",name:"Theory",       hours:10, icon:"📚",clr:"#1d4ed8",bg:"#dbeafe"},
+    {id:"M2",name:"Laboratory",   hours:30, icon:"🧪",clr:"#065f46",bg:"#d1fae5"},
+    {id:"M3",name:"Presentation", hours:10, icon:"🎤",clr:"#6d28d9",bg:"#ede9fe"},
+    {id:"M4",name:"Project",      hours:150,icon:"🏗️",clr:"#92400e",bg:"#fef3c7"}
+  ],
+  pax:[
+    {id:"P001",name:"Priya Sharma", email:"priya@example.com", phone:"9876543210",org:"IIT Indore",  qual:"M.Tech",exp:3,status:"approved",pass:"Xk9#mP2q",scores:{M1:88,M2:null,M3:null,M4:null},docs:2},
+    {id:"P002",name:"Rahul Mehta",  email:"rahul@example.com", phone:"9765432109",org:"DAVV",        qual:"B.Tech",exp:1,status:"approved",pass:"Tz4!wR7v",scores:{M1:92,M2:85,M3:null,M4:null},docs:1},
+    {id:"P003",name:"Anjali Verma", email:"anjali@example.com",phone:"9654321098",org:"Holkar Sc.",  qual:"M.Sc.", exp:2,status:"pending", pass:null,      scores:{},docs:2},
+    {id:"P004",name:"Suresh Patel", email:"suresh@example.com",phone:"9543210987",org:"SGSITS",      qual:"B.E.",  exp:0,status:"rejected",pass:null,      scores:{},docs:0},
+    {id:"P005",name:"Meera Joshi",  email:"meera@example.com", phone:"9432109876",org:"IIM Indore",  qual:"MBA",   exp:5,status:"approved",pass:"Qp8@nL5x",scores:{M1:79,M2:88,M3:91,M4:null},docs:1}
+  ],
+  att:{
+    "2025-09-01":{P001:"present",P002:"present",P005:"present"},
+    "2025-09-02":{P001:"present",P002:"absent", P005:"present"},
+    "2025-09-03":{P001:"present",P002:"present",P005:"absent"},
+    "2025-09-04":{P001:"absent", P002:"present",P005:"present"},
+    "2025-09-05":{P001:"present",P002:"present",P005:"present"},
+  },
+  tests:[{id:"T1",mod:"M1",title:"Theory Assessment",qs:[
+    {q:"Which best describes hybrid learning?",opts:["Only online","Only classroom","Online + classroom","None of above"],ans:2},
+    {q:"What does Laboratory module primarily develop?",opts:["Theory","Hands-on skills","Presentation","Report writing"],ans:1},
+    {q:"How many hours is the Project module?",opts:["10","30","50","150"],ans:3},
+    {q:"Blended learning primarily improves:",opts:["Cost reduction","Flexibility & engagement","Discipline","Exam scores only"],ans:1}
+  ]}],
+  sched:[
+    {wk:"Week 1–2",mod:"Theory",       hrs:10, mode:"Online",    venue:"MS Teams link"},
+    {wk:"Week 2–4",mod:"Laboratory",   hrs:30, mode:"Classroom", venue:"Lab Block 2B"},
+    {wk:"Week 5–6",mod:"Presentation", hrs:10, mode:"Classroom", venue:"Seminar Hall"},
+    {wk:"Week 3–8",mod:"Project",      hrs:150,mode:"Hybrid",    venue:"Self-paced + mentor"},
+  ]
+};
+const ADM={email:"admin@portal.edu",pass:"Admin@2025",name:"Dr. Course Admin",role:"Administrator"};
+let CU=null,TS={};
 
-    if (moreText.style.display === "none") {
-      moreText.style.display = "block";
-      this.innerHTML = "Read less";
-    } else {
-      moreText.style.display = "none";
-      this.innerHTML = "Read more";
-    }
-  });
-});
-</script>
-    <script src="/js/mathjax-config.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/python.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/tomstyle.js"></script>
-	<script>
-document.querySelectorAll('.multi-readmore').forEach(container => {
-    const parts = container.querySelectorAll('.part.hidden');
-    const btn = container.querySelector('.readmore-btn');
-    let index = 0;
+// ═══ AUTH ═══
+function doLogin(){
+  const e=g('le').trim().toLowerCase(),p=g('lp');
+  el('lerr').classList.add('hidden');
+  if(e===ADM.email.toLowerCase()&&p===ADM.pass){CU={...ADM,isAdmin:true};launch();return}
+  const u=DB.pax.find(x=>x.email.toLowerCase()===e);
+  if(!u){serr('lerr','No account found with that email.');return}
+  if(u.status!=='approved'){serr('lerr',u.status==='pending'?'Application pending admin approval.':'Application was not approved.');return}
+  if(u.pass!==p){serr('lerr','Incorrect password. Check the email from admin.');return}
+  CU={...u,isAdmin:false};launch();
+}
+function launch(){
+  el('pg-login').classList.remove('on');el('pg-dash').classList.add('on');el('nav').classList.remove('hidden');
+  el('nav-un').textContent=CU.name;el('nav-ur').textContent=CU.isAdmin?'Administrator':'Participant';
+  el('nav-av').textContent=CU.name.split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase();
+  buildSB();go('home');
+}
+function logout(){CU=null;TS={};el('pg-login').classList.add('on');el('pg-dash').classList.remove('on');el('nav').classList.add('hidden');el('le').value='';el('lp').value=''}
 
-    btn.addEventListener('click', () => {
-        if (index < parts.length) {
-            parts[index].style.display = 'block';
-            index++;
-        }
-        if (index === parts.length) {
-            btn.style.display = 'none';
-        }
-    });
-});
-</script>
-<script>
-        // Optional: Auto-resize height based on content (but keep scrollbar visible)
-        const textarea = document.getElementById('scrollTextarea');
-        textarea.addEventListener('input', function() {
-            this.style.height = 'auto';
-            this.style.height = Math.min(this.scrollHeight, 400) + 'px'; // Max 400px
-        });
-    </script>
-	<div class="container">
-    <footer class="site-footer">
-  <!-- <p class="powered-by">
-    &copy; 2026 &middot; 
-    Powered by the
-    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
-    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
-    <a href="https://knzhou.github.io/" target="_blank" rel="noopener">Kevin Zhou</a>. -->
-    
-	<span class="float-right" aria-hidden="true">
-      <a href="#" class="back-to-top">
-        <span class="button_icon">
-          <i class="fas fa-chevron-up fa-2x"></i>
-        </span>
-      </a>
-    </span>
-  </p>
-</footer>
-  </div>
-<div id="modal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Cite</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <pre><code class="tex hljs"></code></pre>
-      </div>
-      <div class="modal-footer">
-        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
-          <i class="fas fa-copy"></i> Copy
-        </a>
-        <div id="modal-error"></div>
-      </div>
+// ═══ REGISTER ═══
+function fsel(inp,sid){if(inp.files[0])el(sid).textContent='✓ '+inp.files[0].name}
+function subReg(){
+  const n=g('rn'),e=g('re'),ph=g('rph');
+  if(!n||!e||!ph){el('rerr').classList.remove('hidden');return}
+  el('rerr').classList.add('hidden');
+  DB.pax.push({id:'P'+Date.now().toString().slice(-4),name:n,email:e.toLowerCase(),phone:ph,org:g('ro'),qual:g('rq'),exp:g('rx'),status:'pending',pass:null,scores:{},docs:0});
+  el('rform').classList.add('hidden');el('rok').classList.remove('hidden');
+}
+function ltab(w,btn){
+  document.querySelectorAll('.ltab').forEach(b=>b.classList.remove('on'));btn.classList.add('on');
+  el('pnl-l').classList.toggle('hidden',w!=='l');el('pnl-r').classList.toggle('hidden',w!=='r');
+}
+
+// ═══ SIDEBAR ═══
+const IK={
+  home:'<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg>',
+  book:'<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0118 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>',
+  cal:'<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>',
+  tick:'<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>',
+  chart:'<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>',
+  star:'<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.562.562 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg>',
+  edit:'<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931z"/></svg>',
+  clip:'<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z"/></svg>',
+  badge:'<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-.605 3.074 3.746 3.746 0 01-3.074.604 3.745 3.745 0 01-3.068 1.593 3.745 3.745 0 01-3.068-1.593 3.746 3.746 0 01-3.074-.604 3.745 3.745 0 01-.605-3.074A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 01.605-3.074 3.746 3.746 0 013.074-.604A3.745 3.745 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.074.604 3.745 3.745 0 01.605 3.074A3.745 3.745 0 0121 12z"/></svg>',
+  pencil:'<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487z"/></svg>',
+  clock:'<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>',
+  cloud:'<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z"/></svg>',
+  tbl:'<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h1.5C5.496 19.5 6 18.996 6 18.375m-3.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125h-1.5m1.5-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-7.5A1.125 1.125 0 0112 19.5m9.375-14.625H3.375"/></svg>'
+};
+
+function buildSB(){
+  const adm=CU.isAdmin?`
+  <p class="slbl">Administration</p>
+  <button class="si" onclick="go('a-reg')">${IK.clip} Registrations</button>
+  <button class="si" onclick="go('a-att')">${IK.cal} Mark Attendance</button>
+  <button class="si" onclick="go('a-scr')">${IK.chart} Upload Scores</button>
+  <button class="si" onclick="go('a-cert')">${IK.badge} Certificates</button>
+  <button class="si" onclick="go('a-test')">${IK.pencil} Online Tests</button>
+  <button class="si" onclick="go('a-xl')">${IK.tbl} Excel Data Guide</button>`:'';
+  el('sb').innerHTML=`
+  <p class="slbl">Overview</p>
+  <button class="si" onclick="go('home')">${IK.home} Dashboard</button>
+  <button class="si" onclick="go('mod')">${IK.book} Modules</button>
+  <button class="si" onclick="go('att')">${IK.tick} Attendance</button>
+  <button class="si" onclick="go('scr')">${IK.star} My Scores</button>
+  <button class="si" onclick="go('tst')">${IK.edit} Online Tests</button>
+  ${adm}
+  <p class="slbl">Resources</p>
+  <button class="si" onclick="go('sched')">${IK.clock} Schedule</button>
+  <button class="si" onclick="window.open('https://onedrive.live.com','_blank')">${IK.cloud} OneDrive Files</button>`;
+}
+function go(s){
+  document.querySelectorAll('.si').forEach(b=>b.classList.toggle('on',b.getAttribute('onclick')?.includes(`'${s}'`)));
+  const R={home:rHome,mod:rMod,att:rAtt,scr:rScr,tst:rTst,sched:rSched,'a-reg':raReg,'a-att':raAtt,'a-scr':raScr,'a-cert':raCert,'a-test':raTest,'a-xl':raXL};
+  el('area').innerHTML=R[s]?R[s]():'<p style="color:var(--muted)">Coming soon.</p>';
+}
+
+// ═══ RENDERS ═══
+function rHome(){
+  if(CU.isAdmin){
+    const ap=DB.pax.filter(p=>p.status==='approved').length,pe=DB.pax.filter(p=>p.status==='pending').length;
+    return `<div class="ph"><h1>Admin Dashboard</h1><p>8-Week Hybrid Programme — all metrics</p></div>
+    <div class="sgrid">
+      <div class="sc sc-i"><div class="sv">${DB.pax.length}</div><div class="sl">Total Applications</div></div>
+      <div class="sc sc-a"><div class="sv">${ap}</div><div class="sl">Approved</div></div>
+      <div class="sc sc-o"><div class="sv">${pe}</div><div class="sl">Pending</div></div>
+      <div class="sc sc-b"><div class="sv">200h</div><div class="sl">Total Hours</div></div>
     </div>
+    <div class="card"><div class="ch"><div class="ct">Quick Actions</div></div><div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="bs" onclick="go('a-reg')">📋 Applications</button>
+      <button class="bs" onclick="go('a-att')">📅 Attendance</button>
+      <button class="bs" onclick="go('a-scr')">📊 Scores</button>
+      <button class="ba" onclick="go('a-cert')">🏅 Certificates</button>
+      <button class="bs" onclick="go('a-xl')">📁 Excel Guide</button>
+    </div></div>
+    <div class="card"><div class="ch"><div class="ct">Recent Applications</div></div>
+    <div class="tw"><table><thead><tr><th>Name</th><th>Email</th><th>Org</th><th>Status</th></tr></thead><tbody>
+    ${DB.pax.slice(0,5).map(p=>`<tr><td style="font-weight:500">${p.name}</td><td style="color:var(--muted)">${p.email}</td><td>${p.org||'–'}</td><td><span class="badge ${bst(p.status)}">${p.status}</span></td></tr>`).join('')}
+    </tbody></table></div></div>`;
+  }
+  const me=myP(),dates=Object.keys(DB.att),pr=me?dates.filter(d=>DB.att[d][me.id]==='present').length:0;
+  const sc=me?Object.values(me.scores||{}).filter(v=>v!==null):[],avg=sc.length?Math.round(sc.reduce((a,b)=>a+b,0)/sc.length):'–';
+  return `<div class="ph"><h1>Welcome, ${CU.name.split(' ')[0]} 👋</h1><p>Advanced Hybrid Programme · 8 Weeks · 200 hours</p></div>
+  <div class="sgrid">
+    <div class="sc sc-i"><div class="sv">${pr}</div><div class="sl">Days Present</div></div>
+    <div class="sc sc-a"><div class="sv">${sc.length}/4</div><div class="sl">Modules Scored</div></div>
+    <div class="sc sc-o"><div class="sv">${avg}%</div><div class="sl">Average Score</div></div>
+    <div class="sc sc-b"><div class="sv">200h</div><div class="sl">Total Hours</div></div>
   </div>
-</div>
+  <div class="mgrid">${DB.mod.map(m=>{const s=me?.scores?.[m.id];return`<div class="mc"><div class="mico">${m.icon}</div><div class="mname">${m.name}</div><div class="mhrs">${m.hours}h</div><div class="pbar"><div class="pfill" style="width:${s||0}%;background:${m.clr}"></div></div><div class="plbl">${s?`${s}%`:'Not evaluated'}</div></div>`;}).join('')}</div>
+  <div class="card"><div class="ch"><div class="ct">Upcoming Sessions</div></div><div class="tw"><table><thead><tr><th>Date</th><th>Time</th><th>Module</th><th>Mode</th><th>Venue</th></tr></thead><tbody>
+  <tr><td style="font-weight:500">Mon 8 Sep</td><td>10:00–13:00</td><td>Laboratory</td><td><span class="badge bneu">Classroom</span></td><td style="color:var(--muted)">Lab 2B</td></tr>
+  <tr><td style="font-weight:500">Wed 10 Sep</td><td>14:00–16:00</td><td>Theory</td><td><span class="badge binfo">Online</span></td><td style="color:var(--muted)">MS Teams</td></tr>
+  <tr><td style="font-weight:500">Fri 12 Sep</td><td>10:00–12:00</td><td>Presentation</td><td><span class="badge bneu">Classroom</span></td><td style="color:var(--muted)">Seminar Hall</td></tr>
+  </tbody></table></div></div>`;
+}
+
+function rMod(){return`<div class="ph"><h1>Course Modules</h1></div>${DB.mod.map(m=>`<div class="card" style="border-left:4px solid ${m.clr}"><div class="ch"><div style="display:flex;align-items:center;gap:12px"><span style="font-size:28px">${m.icon}</span><div><div class="ct">${m.name}</div><div class="cs">${m.hours} hours</div></div></div></div><div class="fr2" style="gap:.75rem"><div><p style="font-size:11px;color:var(--light);margin-bottom:3px">Duration</p><p style="font-size:13px;font-weight:500">${m.hours}h</p></div><div><p style="font-size:11px;color:var(--light);margin-bottom:3px">Assessment</p><p style="font-size:13px;font-weight:500">${m.id==='M1'?'Online Test':m.id==='M2'?'Practical':m.id==='M3'?'Peer + Expert Score':'Report + Viva'}</p></div></div>${m.id==='M1'?`<div style="margin-top:.9rem"><button class="bs bsm" onclick="go('tst')">Take Online Test →</button></div>`:''}</div>`).join('')}`}
+
+function rAtt(){
+  const me=myP(),dates=Object.keys(DB.att).sort(),pr=me?dates.filter(d=>DB.att[d]?.[me.id]==='present').length:0,pct=dates.length?Math.round(pr/dates.length*100):0;
+  return`<div class="ph"><h1>Attendance Record</h1></div>
+  <div class="sgrid" style="grid-template-columns:repeat(3,1fr)"><div class="sc sc-i"><div class="sv">${dates.length}</div><div class="sl">Total Classes</div></div><div class="sc sc-a"><div class="sv">${pr}</div><div class="sl">Present</div></div><div class="sc sc-o"><div class="sv">${pct}%</div><div class="sl">Attendance %</div></div></div>
+  <div class="card"><div class="ch"><div class="ct">Log</div></div><div class="tw"><table><thead><tr><th>Date</th><th>Day</th><th>Status</th></tr></thead><tbody>
+  ${dates.map(d=>{const s=me?(DB.att[d]?.[me.id]||'–'):'–',dt=new Date(d);return`<tr><td style="font-weight:500">${dt.toLocaleDateString('en-IN',{year:'numeric',month:'short',day:'numeric'})}</td><td style="color:var(--muted)">${dt.toLocaleDateString('en-IN',{weekday:'long'})}</td><td><span class="badge ${s==='present'?'bok':s==='absent'?'berr':'bneu'}">${s}</span></td></tr>`;}).join('')}
+  </tbody></table></div></div>`;
+}
+
+function rScr(){
+  const me=myP();if(!me)return'<p>No data.</p>';
+  return`<div class="ph"><h1>Evaluation Scores</h1></div>${DB.mod.map(m=>{const s=me.scores?.[m.id];return`<div class="card" style="border-left:4px solid ${m.clr}"><div style="display:flex;align-items:center;justify-content:space-between"><div style="display:flex;align-items:center;gap:12px"><span style="font-size:24px">${m.icon}</span><div><div style="font-weight:600;font-size:13px">${m.name}</div><div style="font-size:11px;color:var(--light)">${m.hours}h</div></div></div><div style="text-align:right">${s!=null?`<div style="font-size:28px;font-weight:600;color:${m.clr}">${s}<span style="font-size:14px">%</span></div><span class="badge ${s>=75?'bok':s>=50?'bwarn':'berr'}">${s>=75?'Pass':s>=50?'Borderline':'Fail'}</span>`:'<span class="badge bneu">Not yet evaluated</span>'}</div></div>${s?`<div style="margin-top:.9rem"><div class="pbar" style="height:7px"><div class="pfill" style="width:${s}%;background:${m.clr}"></div></div></div>`:''}</div>`;}).join('')}`;
+}
+
+function rTst(){
+  if(TS.active){
+    const t=DB.tests.find(x=>x.id===TS.active);
+    return`<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem"><div class="ph" style="margin:0"><h1>${t.title}</h1></div><span class="badge binfo">${t.qs.length} Qs</span></div>
+    ${t.qs.map((q,i)=>`<div class="qcard"><div class="qn">Question ${i+1} of ${t.qs.length}</div><div class="qt">${q.q}</div><div class="opts">${q.opts.map((o,j)=>`<label class="opt ${TS.ans?.[i]===j?'sel':''}"><input type="radio" name="q${i}" value="${j}" onchange="TS.ans=TS.ans||{};TS.ans[${i}]=${j};document.querySelectorAll('[name=q${i}]').forEach((r,ri)=>{r.closest('.opt').className='opt'+(ri===${j}?' sel':'')})"/>${o}</label>`).join('')}</div></div>`).join('')}
+    <div style="display:flex;gap:8px;margin-top:.9rem"><button class="bp" style="max-width:170px" onclick="subT('${t.id}')">Submit →</button><button class="bs" onclick="TS.active=null;go('tst')">Cancel</button></div>`;
+  }
+  return`<div class="ph"><h1>Online Tests</h1></div>${DB.tests.map(t=>`<div class="card"><div class="ch"><div><div class="ct">${t.title}</div><div class="cs">${t.qs.length} questions · ${DB.mod.find(m=>m.id===t.mod)?.name}</div></div>${TS[t.id]?.done?`<span class="badge bok">Done — ${TS[t.id].score}%</span>`:`<button class="ba" onclick="TS.active='${t.id}';TS.ans={};go('tst')">Start →</button>`}</div><p style="font-size:13px;color:var(--muted)">MCQ assessment for the ${DB.mod.find(m=>m.id===t.mod)?.name} module.</p></div>`).join('')}`;
+}
+function subT(id){const t=DB.tests.find(x=>x.id===id);let c=0;t.qs.forEach((q,i)=>{if(TS.ans?.[i]===q.ans)c++});const s=Math.round(c/t.qs.length*100);TS[id]={done:true,score:s};TS.active=null;toast(`Submitted! Score: ${s}%`,s>=75?'s':'i');go('tst')}
+
+function rSched(){return`<div class="ph"><h1>Course Schedule</h1></div><div class="card"><div class="tw"><table><thead><tr><th>Period</th><th>Module</th><th>Hours</th><th>Mode</th><th>Venue/Link</th></tr></thead><tbody>${DB.sched.map(s=>`<tr><td style="font-weight:600">${s.wk}</td><td>${s.mod}</td><td>${s.hrs}h</td><td><span class="badge ${s.mode==='Online'?'binfo':s.mode==='Hybrid'?'bwarn':'bneu'}">${s.mode}</span></td><td style="color:var(--muted)">${s.venue}</td></tr>`).join('')}</tbody></table></div></div>`}
+
+// ═══ ADMIN PAGES ═══
+function raReg(){
+  const f=window._rf||'all',list=f==='all'?DB.pax:DB.pax.filter(p=>p.status===f);
+  return`<div class="ph"><h1>Registrations</h1></div>
+  <div style="display:flex;gap:7px;margin-bottom:1rem;flex-wrap:wrap">${['all','pending','approved','rejected'].map(s=>`<button class="bs bsm" style="${f===s?'background:var(--ink);color:#fff;border-color:var(--ink)':''}" onclick="window._rf='${s}';go('a-reg')">${s.charAt(0).toUpperCase()+s.slice(1)}</button>`).join('')}</div>
+  <div class="card"><div class="tw"><table><thead><tr><th>Name</th><th>Email</th><th>Phone</th><th>Org</th><th>Docs</th><th>Status</th><th>Actions</th></tr></thead><tbody>
+  ${list.map(p=>`<tr><td style="font-weight:500">${p.name}</td><td style="color:var(--muted);font-size:12px">${p.email}</td><td style="color:var(--muted);font-size:12px">${p.phone}</td><td>${p.org||'–'}</td><td style="color:var(--muted)">${p.docs||0}</td><td><span class="badge ${bst(p.status)}">${p.status}</span></td>
+  <td><div style="display:flex;gap:5px;flex-wrap:wrap">${p.status==='pending'?`<button class="ba bsm" onclick="appv('${p.id}')">Approve</button><button class="bd" onclick="rej('${p.id}')">Reject</button>`:p.status==='approved'?`<button class="bs bsm" onclick="vPass('${p.id}')">Credentials</button><button class="bs bsm" onclick="vDocs('${p.id}')">Docs</button>`:'<span style="font-size:11px;color:var(--light)">–</span>'}</div></td></tr>`).join('')}
+  </tbody></table></div></div>`;
+}
+function appv(id){const p=DB.pax.find(x=>x.id===id);p.status='approved';p.pass=gp();toast(`${p.name} approved!`,'s');go('a-reg')}
+function rej(id){const p=DB.pax.find(x=>x.id===id);p.status='rejected';toast(`${p.name} rejected`,'i');go('a-reg')}
+function vPass(id){
+  const p=DB.pax.find(x=>x.id===id);
+  openM('Login Credentials — '+p.name,`
+  <div class="ibox ib">Send these credentials to the participant via Outlook. Use the button below to open a pre-filled draft.</div>
+  <div class="fg"><label class="fl">Username (Email)</label><div style="padding:9px 12px;background:var(--sand);border-radius:9px;font-size:13px;font-family:monospace">${p.email}</div></div>
+  <div class="fg"><label class="fl">Password</label><div style="padding:9px 12px;background:var(--sand);border-radius:9px;font-size:13px;font-family:monospace">${p.pass}</div></div>
+  <div class="fg"><label class="fl">Portal URL</label><div style="padding:9px 12px;background:var(--sand);border-radius:9px;font-size:13px;color:var(--muted)">Paste your OneDrive shared link here</div></div>
+  <button class="bp" onclick="sendMail('${id}')">📧 Open Outlook Draft</button>`);
+}
+function vDocs(id){
+  const p=DB.pax.find(x=>x.id===id);
+  openM('Documents — '+p.name,`
+  <div class="ibox io">Store documents in OneDrive → <strong>CourseDocuments/${p.id}_${p.name.replace(/ /g,'_')}/</strong></div>
+  <div style="display:flex;flex-direction:column;gap:6px">
+    <div style="padding:9px 12px;background:var(--sand);border-radius:9px;font-size:13px">📄 ID_Proof.pdf</div>
+    ${p.docs>1?`<div style="padding:9px 12px;background:var(--sand);border-radius:9px;font-size:13px">📄 Qualification_Certificate.pdf</div>`:''}
+  </div>
+  <button class="bs" style="margin-top:1rem" onclick="window.open('https://onedrive.live.com','_blank')">Open OneDrive →</button>`);
+}
+function sendMail(id){
+  const p=DB.pax.find(x=>x.id===id);
+  const sub=encodeURIComponent('Hybrid Course Portal — Your Login Credentials');
+  const bod=encodeURIComponent(`Dear ${p.name},\n\nCongratulations! Your application for the 8-Week Hybrid Programme has been approved.\n\nLogin credentials:\n──────────────────\nUsername: ${p.email}\nPassword: ${p.pass}\nPortal: [paste your OneDrive link here]\n──────────────────\n\nBest regards,\nCourse Coordinator`);
+  window.open(`mailto:${p.email}?subject=${sub}&body=${bod}`,'_blank');
+  toast('Outlook draft opened!','s');cm();
+}
+function gp(){const c='ABCDEFGHJKMNPQRSTUVWXYZabcdefghjkmnpqrstuvwxyz23456789!@#';return Array.from({length:10},()=>c[Math.floor(Math.random()*c.length)]).join('')}
+
+function raAtt(){
+  const today=new Date().toISOString().split('T')[0];
+  if(!DB.att[today])DB.att[today]={};
+  const app=DB.pax.filter(p=>p.status==='approved');
+  return`<div class="ph"><h1>Mark Attendance</h1><p>Today: ${new Date().toLocaleDateString('en-IN',{weekday:'long',year:'numeric',month:'long',day:'numeric'})}</p></div>
+  <div class="ibox ib">After marking, use the Export section below to copy attendance data into your OneDrive Excel (CourseData.xlsx → Attendance sheet).</div>
+  <div class="card"><div class="tw"><table><thead><tr><th>Participant</th><th>Email</th><th>Status</th><th>Mark</th></tr></thead><tbody>
+  ${app.map(p=>{const s=DB.att[today][p.id]||null;return`<tr><td style="font-weight:500">${p.name}</td><td style="color:var(--muted);font-size:12px">${p.email}</td><td>${s?`<span class="badge ${s==='present'?'bok':'berr'}">${s}</span>`:'<span class="badge bneu">Not marked</span>'}</td><td><div style="display:flex;gap:5px"><button class="ba bsm" onclick="mA('${p.id}','present','${today}')">Present</button><button class="bd" onclick="mA('${p.id}','absent','${today}')">Absent</button></div></td></tr>`;}).join('')}
+  </tbody></table></div></div>
+  <div class="card"><div class="ch"><div class="ct">Export to Excel</div></div><p style="font-size:13px;color:var(--muted);margin-bottom:.9rem">Copy this into the Attendance sheet of CourseData.xlsx on OneDrive:</p>
+  <div id="axp" style="font-family:monospace;font-size:12px;background:var(--sand);padding:1rem;border-radius:10px;line-height:1.8">${app.map(p=>`${today}\t${p.id}\t${p.name}\t${DB.att[today][p.id]||'not marked'}`).join('\n')}</div>
+  <button class="bs bsm" style="margin-top:.75rem" onclick="cpX()">📋 Copy to Clipboard</button></div>`;
+}
+function mA(pid,s,d){DB.att[d][pid]=s;const p=DB.pax.find(x=>x.id===pid);toast(`${p.name} → ${s}`,'s');go('a-att')}
+function cpX(){navigator.clipboard?.writeText(el('axp').innerText).then(()=>toast('Copied! Paste into Excel.','s')).catch(()=>toast('Select and copy the text manually.','i'))}
+
+function raScr(){
+  const app=DB.pax.filter(p=>p.status==='approved');
+  return`<div class="ph"><h1>Upload Scores</h1></div>
+  <div class="ibox ib">Enter scores 0–100 and click Save per row. Also copy to CourseData.xlsx → Scores sheet.</div>
+  <div class="card"><div class="tw"><table><thead><tr><th>Participant</th>${DB.mod.map(m=>`<th>${m.icon} ${m.name}</th>`).join('')}<th>Save</th></tr></thead><tbody>
+  ${app.map(p=>`<tr><td style="font-weight:500;white-space:nowrap">${p.name}</td>${DB.mod.map(m=>`<td><input type="number" min="0" max="100" value="${p.scores?.[m.id]??''}" onchange="uS('${p.id}','${m.id}',this.value)" style="width:60px;padding:5px 7px;border:1.5px solid var(--bdr);border-radius:8px;font-size:12px;font-family:'Sora',sans-serif"/></td>`).join('')}<td><button class="ba bsm" onclick="svS('${p.id}')">Save</button></td></tr>`).join('')}
+  </tbody></table></div></div>`;
+}
+function uS(pid,mid,val){const p=DB.pax.find(x=>x.id===pid);if(!p.scores)p.scores={};p.scores[mid]=val?parseInt(val):null}
+function svS(pid){const p=DB.pax.find(x=>x.id===pid);toast(`Saved for ${p.name}`,'s')}
+
+function raCert(){
+  const app=DB.pax.filter(p=>p.status==='approved'),dates=Object.keys(DB.att);
+  return`<div class="ph"><h1>Generate Certificates</h1></div>
+  <div class="ibox io">Eligibility: Average score ≥ 50% across evaluated modules AND ≥ 75% attendance.</div>
+  <div class="card"><div class="tw"><table><thead><tr><th>Participant</th><th>Avg Score</th><th>Attendance</th><th>Eligible</th><th>Action</th></tr></thead><tbody>
+  ${app.map(p=>{
+    const sc=Object.values(p.scores||{}).filter(v=>v!==null),avg=sc.length?Math.round(sc.reduce((a,b)=>a+b,0)/sc.length):0;
+    const pr=dates.filter(d=>DB.att[d][p.id]==='present').length,att=dates.length?Math.round(pr/dates.length*100):0,ok=avg>=50&&att>=75;
+    return`<tr><td style="font-weight:500">${p.name}</td><td>${avg}%</td><td>${att}%</td><td><span class="badge ${ok?'bok':'berr'}">${ok?'Eligible':'Not Eligible'}</span></td><td>${ok?`<button class="ba bsm" onclick="shCert('${p.id}')">Preview →</button>`:'–'}</td></tr>`;
+  }).join('')}
+  </tbody></table></div></div>
+  <div class="card"><div class="ch"><div class="ct">PDF Certificate Workflow</div></div><div style="display:flex;flex-direction:column;gap:.6rem;font-size:13px;color:var(--muted)">
+    <p>1. Click <strong>Preview</strong> → browser print → <strong>Save as PDF</strong>.</p>
+    <p>2. Save to OneDrive → <code style="background:var(--sand);padding:2px 6px;border-radius:5px">CourseDocuments/Certificates/</code></p>
+    <p>3. Share the PDF link with participant via Outlook.</p>
+    <p><strong>Alternative:</strong> Maintain a Word certificate template in OneDrive — fill the name and export each one as PDF via Word → File → Export → PDF.</p>
+  </div></div>`;
+}
+function shCert(id){
+  const p=DB.pax.find(x=>x.id===id);
+  openM('Certificate Preview',`
+  <div class="cert">
+    <p class="co">National Institute of Professional Development</p>
+    <h1 class="ct2">Certificate of Completion</h1>
+    <p class="cs2">8-Week Hybrid Professional Development Programme</p>
+    <p class="cpre">This is to certify that</p>
+    <div class="cn">${p.name}</div>
+    <p class="cdesc">has successfully completed the Advanced Hybrid Course comprising Theory, Laboratory, Presentation and Project modules totalling 200 hours of structured learning.</p>
+    <p class="cdate">September – October 2025</p>
+    <div class="csigs"><div class="csig">Course Coordinator</div><div class="csig">Programme Director</div></div>
+  </div>
+  <div style="text-align:center;margin-top:1.25rem"><button class="bp" style="max-width:200px" onclick="window.print();toast('Use Save as PDF in the print dialog','i')">🖨️ Print / Save as PDF</button></div>`);
+}
+
+function raTest(){
+  return`<div class="ph"><h1>Online Tests</h1></div>
+  ${DB.tests.map(t=>`<div class="card"><div class="ch"><div><div class="ct">${t.title}</div><div class="cs">${t.qs.length} questions · ${DB.mod.find(m=>m.id===t.mod)?.name}</div></div><span class="badge bok">Active</span></div>
+  <div class="tw"><table><thead><tr><th>#</th><th>Question</th><th>Correct Answer</th></tr></thead><tbody>${t.qs.map((q,i)=>`<tr><td style="color:var(--light)">${i+1}</td><td>${q.q}</td><td style="color:var(--ok);font-weight:500">${q.opts[q.ans]}</td></tr>`).join('')}</tbody></table></div>
+  <div style="display:flex;gap:7px;margin-top:.9rem"><button class="bs bsm" onclick="toast('For advanced tests, use Microsoft Forms (forms.office.com) — free with your account.','i')">Use Microsoft Forms</button><button class="bs bsm" onclick="toast('Question added (demo)','s')">+ Add Question</button></div>
+  </div>`).join('')}
+  <div class="ibox ib"><strong>Tip:</strong> Create tests at <a href="https://forms.office.com" target="_blank" style="color:var(--ifc)">forms.office.com</a> — free with your Microsoft account. Share the link with participants or embed it here.</div>`;
+}
+
+function raXL(){
+  return`<div class="ph"><h1>OneDrive Excel Data Guide</h1><p>Manage all course data through a single Excel file — no SharePoint needed</p></div>
+  <div class="ibox ib">Your Microsoft 365 license (without SharePoint) is fully supported. All data lives in <strong>CourseData.xlsx</strong> on your OneDrive. This portal can connect to it automatically via the Microsoft Graph API, or you can update it manually as the admin.</div>
+  <div class="card"><div class="ch"><div class="ct">Step 1 — Create CourseData.xlsx on OneDrive</div></div>
+  <p style="font-size:13px;color:var(--muted);margin-bottom:.9rem">Open OneDrive → New → Excel workbook → Rename it <strong>CourseData.xlsx</strong>. Create these 4 sheets:</p>
+  <div style="display:flex;flex-direction:column;gap:.5rem;font-size:13px">
+    ${[['Sheet 1','Participants','ID, Name, Email, Phone, Org, Qualification, Experience, SOP, Status, Password, RegistrationDate'],['Sheet 2','Attendance','Date, ParticipantID, ParticipantName, Status (Present/Absent)'],['Sheet 3','Scores','ParticipantID, Name, Theory, Laboratory, Presentation, Project, AverageScore'],['Sheet 4','Certificates','ParticipantID, Name, IssueDate, EligibleYN, OneDriveFileLink']].map(([lbl,name,cols])=>`
+    <div style="padding:.7rem 1rem;background:var(--sand);border-radius:9px">
+      <span style="background:#1d6f42;color:#fff;padding:2px 8px;border-radius:5px;font-size:10px;font-weight:600">${lbl}</span>
+      <strong style="margin-left:8px">${name}</strong>
+      <p style="font-size:11px;color:var(--muted);margin-top:3px">${cols}</p>
+    </div>`).join('')}
+  </div></div>
+  <div class="card"><div class="ch"><div class="ct">Step 2 — OneDrive Folder Structure</div></div>
+  <div style="font-family:monospace;font-size:12px;background:var(--sand);padding:1rem;border-radius:10px;line-height:2">
+📁 OneDrive/HybridCourse2025/<br>
+&nbsp;&nbsp;📊 CourseData.xlsx<br>
+&nbsp;&nbsp;🌐 HybridCoursePortal.html ← <em>this file</em><br>
+&nbsp;&nbsp;📁 CourseMaterials/Theory_Slides.pdf, Lab_Manual.pdf<br>
+&nbsp;&nbsp;📁 Registrations/P001_Priya_Sharma/ID_Proof.pdf<br>
+&nbsp;&nbsp;📁 Certificates/Certificate_PriyaSharma.pdf
+  </div></div>
+  <div class="card"><div class="ch"><div class="ct">Step 3 — Daily Admin Workflow</div></div>
+  <div style="display:flex;flex-direction:column;gap:.6rem;font-size:13px;color:var(--muted)">
+    ${[['Mark attendance','Use the Mark Attendance page in this portal. Then copy the generated export into the Attendance sheet in Excel.'],['Approve applications','Use Registrations page. Copy approved participant details into the Participants sheet.'],['Send credentials email','Use the "Open Outlook Draft" button — it pre-fills subject + body with username and password.'],['Upload scores','Enter scores in the Upload Scores page. Then copy to the Scores sheet in Excel.'],['Generate certificates','Preview → Print → Save as PDF → upload to OneDrive Certificates folder → email link via Outlook.']].map(([title,desc],i)=>`<div style="padding:.7rem 1rem;background:var(--sand);border-radius:9px"><div style="font-weight:600;color:var(--ink);margin-bottom:3px">${i+1}. ${title}</div><div>${desc}</div></div>`).join('')}
+  </div></div>
+  <div class="card"><div class="ch"><div class="ct">Step 4 — Auto-Connect with Microsoft Graph API (optional)</div></div>
+  <p style="font-size:13px;color:var(--muted);margin-bottom:.9rem">For automatic read/write without manual Excel copy-paste, register a free app in Azure Active Directory and connect this portal to your OneDrive Excel via the Graph API.</p>
+  <div class="ibox ib" style="font-family:monospace;font-size:11px">
+    <strong>Read participants:</strong><br>
+    GET https://graph.microsoft.com/v1.0/me/drive/root:/CourseData.xlsx:/workbook/worksheets/Participants/usedRange<br><br>
+    <strong>Write attendance row:</strong><br>
+    POST https://graph.microsoft.com/v1.0/me/drive/root:/CourseData.xlsx:/workbook/worksheets/Attendance/tables/AttTable/rows
+  </div>
+  <p style="font-size:12px;color:var(--muted)">Full integration code is in the M365_DEPLOYMENT_GUIDE.md file provided.</p></div>
+  <div class="card"><div class="ch"><div class="ct">Microsoft Forms — Online Tests</div></div>
+  <p style="font-size:13px;color:var(--muted);margin-bottom:.9rem">Create module tests at <strong>forms.office.com</strong> (free with your Microsoft account). Share the link inside the portal or via Outlook.</p>
+  <button class="ba" onclick="window.open('https://forms.office.com','_blank')">Open Microsoft Forms →</button></div>
+  <div class="card"><div class="ch"><div class="ct">Email via Outlook</div></div>
+  <p style="font-size:13px;color:var(--muted);margin-bottom:.9rem">All credential emails are sent via the "Open Outlook Draft" button in Registrations. For bulk announcements, use Outlook's mail merge with the Excel participant list.</p>
+  <button class="bs" onclick="window.open('https://outlook.live.com','_blank')">Open Outlook →</button></div>`;
+}
+
+// ═══ HELPERS ═══
+function myP(){return DB.pax.find(p=>p.email===CU?.email)}
+function bst(s){return s==='approved'?'bok':s==='pending'?'bwarn':'berr'}
+function g(id){return el(id)?.value?.trim()||''}
+function el(id){return document.getElementById(id)}
+function serr(id,msg){const e=el(id);e.textContent=msg;e.classList.remove('hidden')}
+function openM(t,b){el('mttl').textContent=t;el('mb').innerHTML=b;el('movl').classList.remove('hidden')}
+function cmif(e){if(e.target===el('movl'))cm()}
+function cm(){el('movl').classList.add('hidden')}
+function toast(msg,type='i'){const tc=el('tc'),d=document.createElement('div');d.className=`toast t${type}`;d.textContent=msg;tc.appendChild(d);setTimeout(()=>d.remove(),4000)}
+
+window.addEventListener('DOMContentLoaded',()=>{el('le').value='admin@portal.edu';el('lp').value='Admin@2025'})
+</script>
 </body>
 </html>
