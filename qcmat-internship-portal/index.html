@@ -312,14 +312,34 @@
                 font-size: 30px;
             }
         }
+/* Container for images */
+        .image-row {
+            display: flex;              /* Places items in a row */
+            justify-content: center;    /* Centers them horizontally */
+            align-items: center;        /* Aligns them vertically */
+            gap: 20px;                   /* Space between images */
+            margin-top: 50px;
+        }
 
+/* Make images responsive */
+        .image-row img {
+            max-width: auto;  /* Limit width */
+            height: 75px;      /* Keep aspect ratio */
+            border: 0px solid #ccc;
+            border-radius: 0px;
+        }
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=Lora:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
     </style>
 </head>
 <body>
 
     <nav class="navbar">
         <div class="logo">QCMAT Portal</div>
-
+	    <div class="image-row">
+            <img src="images/QCMAT.png" alt="COE QC">
+            <img src="images/SGS.png" alt="SGSITS">    
+		    <img src="images/IPA1.png" alt="IPA">
+        </div>
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#modules">Modules</a>
