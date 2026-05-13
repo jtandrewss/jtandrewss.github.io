@@ -155,12 +155,12 @@ tr:last-child td{border-bottom:none}tr:hover td{background:#fafbfc}
 .ib{background:var(--ibg);color:var(--ifc);border:1px solid #93c5fd}.io{background:var(--warnbg);color:var(--warn);border:1px solid #fcd34d}
 .fr2{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
 .fsec{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--light);margin:1.25rem 0 .6rem}
-@media(max-width:768px){.alayout{grid-template-columns:1fr}.sidebar{display:none}.fr2{grid-template-columns:1fr}}</style>
+@media(max-width:768px){.alayout{grid-template-columns:1fr}.sidebar{display:none}.fr2{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-
 <nav id="nav" class="hidden">
-  <div class="nbrand"><div class="ngem">HC</div><span class="nname">Hybrid<em>Course</em> Portal</span></div>
+  <div class="nbrand"><div class="ngem">HC</div><span class="nname">QCMAT<em> Internship </em> Portal</span></div>
   <div class="nright">
     <div class="nchip"><div class="nav" id="nav-av">?</div><div><div class="nun" id="nav-un">–</div><div class="nur" id="nav-ur">–</div></div></div>
     <button id="bout" onclick="logout()">Logout</button>
@@ -209,13 +209,15 @@ tr:last-child td{border-bottom:none}tr:hover td{background:#fafbfc}
 			  <option value="M.Tech./M.E.">M.Tech./M.E.</option>
 			  <option value="M.Sc.">M.Sc.</option>
 			  <option value="Others">Others</option>
-			</select></div>
+			</select>
+		    </div>
 			<div class="fg"><label class="fl">Year of Study:</label>
 			<select name="year" id="year">
 			  <option value="1">I Year</option>
 			  <option value="2">II Year</option>
 			  <option value="3">III Year</option>
-			</select></div>
+			</select>
+			</div>
         </div>
         <div class="fg"><label class="fl">Why would you like to attend? (Max 100 words)</label><textarea id="rs" class="fi" rows="3" placeholder="Why do you want to attend this internship?"></textarea></div>
 		<div class="fg"><label class="fl">What are your expectations? (Max 100 words)</label><textarea id="rs" class="fi" rows="3" placeholder="What do you expect to learn from this internship?"></textarea></div>
@@ -227,9 +229,9 @@ tr:last-child td{border-bottom:none}tr:hover td{background:#fafbfc}
           <p>Upload, screenshot of transaction.</p><span id="fidn">PDF, JPG or PNG</span>
         </div>
 		<input type="radio" id="Declaration" name="choice" value="1">
-		<label for="option1">Declaration: By submitting this form, I confirm that the registration fee is non-refundable and I do commit to attend the course in its entirety.</label>
+		<div> <label for="option1">Declaration: By submitting this form, I confirm that the registration fee is non-refundable and I do commit to attend the course in its entirety.</label>
         <button class="bp" style="margin-top:1.2rem" onclick="subReg()">Submit Application →</button>
-      </div>
+		</div>
       <div id="rok" class="hidden" style="text-align:center;padding:2rem 0">
         <div style="width:60px;height:60px;background:var(--okbg);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto .9rem"><svg fill="none" viewBox="0 0 24 24" stroke="var(--ok)" stroke-width="2.5" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></div>
         <h2 style="font-family:'Lora',serif;color:var(--ink);margin-bottom:.4rem">Application Submitted!</h2>
