@@ -31,8 +31,12 @@
 			<img src="images/NQM.png" alt="NQM">
 		    <img src="images/IPA1.png" alt="IPA">
         </div>
+		<div class="logo">
+            QCMAT Internship Portal
+        </div>
 	     <div class="nav-links">
-			 <a href="index.html">QCMAT Internship Portal</a>
+			 <a href="index.html">Home</a>
+			 <a href="register.html">Register</a>
             <a href="login.html">Login</a>
         </div>
     </nav>
@@ -41,56 +45,83 @@
     QCMAT Internship Participant Login
   </h2>
 </div>
-<div class="container">
-    <div class="card">
-        <input type="email" id="email"
-               placeholder="Email">
+<section class="form-page">
 
-        <input type="password" id="password"
-               placeholder="Password">
+        <div class="login-wrapper">
 
-        <button class="btn" onclick="login()">
-            Login
-        </button>
+            <div class="glass-form login-form">
 
-    </div>
+                <div class="login-icon">
+                    <i class="fas fa-user-shield"></i>
+                </div>
 
-</div>
+                <h2>
+                    Participant Login
+                </h2>
 
-<script src="js/config.js"></script>
+                <p class="login-subtitle">
+                    Access your internship dashboard,
+                    attendance, evaluations and certificates.
+                </p>
 
-<script>
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email"
+                           id="email"
+                           placeholder="Email Address">
+                </div>
 
-async function login() {
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password"
+                           id="password"
+                           placeholder="Password">
+                </div>
 
-    const data = {
-        action: 'login',
-        email: document.getElementById('email').value,
-        password: document.getElementById('password').value
-    };
+                <button class="modern-btn"
+                        onclick="login()">
+                    Login to Portal
+                </button>
 
-    const response = await fetch(API_URL, {
-        method: 'POST',
-        body: JSON.stringify(data)
-    });
+            </div>
 
-    const result = await response.json();
+        </div>
 
-    if (result.status === 'success') {
+    </section>
 
-        localStorage.setItem('studentName', result.name);
-        localStorage.setItem('studentEmail', data.email);
+    <script src="js/config.js"></script>
 
-        window.location.href = 'dashboard.html';
+    <script>
 
-    } else {
+    async function login() {
 
-        alert('Invalid Login Credentials');
+        const data = {
+            action: 'login',
+            email: document.getElementById('email').value,
+            password: document.getElementById('password').value
+        };
 
+        const response = await fetch(API_URL, {
+            method: 'POST',
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (result.status === 'success') {
+
+            localStorage.setItem('studentName', result.name);
+            localStorage.setItem('studentEmail', data.email);
+
+            window.location.href = 'dashboard.html';
+
+        } else {
+
+            alert('Invalid Login Credentials');
+
+        }
     }
-}
 
-</script>
-
-</body>
+    </script>
+</body>	
 </html>
