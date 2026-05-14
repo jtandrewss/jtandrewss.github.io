@@ -41,32 +41,23 @@
         </div>
     </nav>
     <section class="form-page">
-
         <div class="form-container">
-
             <div class="form-left">
-
                 <h1>
-                    Internship Registration
+                    QCMAT Internship Registration
                 </h1>
-
                 <div class="glass-form">
-
-                    <h2>
-                        Participant Registration
-                    </h2>
-
                     <form id="regForm"
                           onsubmit="registerParticipant(event)">
-
-                        <div class="input-group">
+<div id="pnl-r" class="hidden">
+      <div id="rerr" class="ale ae hidden">Please fill all required fields.</div>
+						<div class="input-group">
                             <i class="fas fa-user"></i>
                             <input type="text"
                                    id="name"
                                    placeholder="Full Name"
                                    required>
                         </div>
-
                         <div class="input-group">
                             <i class="fas fa-envelope"></i>
                             <input type="email"
@@ -74,7 +65,6 @@
                                    placeholder="Email Address"
                                    required>
                         </div>
-
                         <div class="input-group">
                             <i class="fas fa-phone"></i>
                             <input type="text"
@@ -82,14 +72,12 @@
                                    placeholder="Mobile Number"
                                    required>
                         </div>
-
                         <div class="input-group">
                             <i class="fas fa-university"></i>
                             <input type="text"
                                    id="college"
                                    placeholder="College / Institution">
                         </div>
-
                        <div class="input-group">
                             <i class="fas fa-graduation-cap"></i>
 							<select name="degree" id="degree" placeholder="Degree">
@@ -99,78 +87,45 @@
 			  					<option value="Others">Others</option>
 							</select>
 		    			</div>
-		
-                        <div class="input-group">
+                       <div class="input-group">
                             <i class="fas fa-layer-group"></i>
-                            <input type="text"
-                                   id="year"
-                                   placeholder="Year">
-                        </div>
-
+							<select name="degree" id="year" placeholder="Year">
+							  	<option value="1">I Year</option>
+			  					<option value="2">II Year</option>
+			  					<option value="3">III Year</option>	
+							</select>
+		    			</div>
                         <div class="input-group textarea-group">
                             <i class="fas fa-location-dot"></i>
-                            <textarea id="address"
-                                      placeholder="Address"></textarea>
+                            <textarea id="purpose" class="fi" rows="3"
+                                      placeholder="Explain in 100 words, why you want to attend the internship and what do you expect from the internship."></textarea>
                         </div>
-
-                        <button class="modern-btn">
-                            Submit Registration
-                        </button>
-
-                    </form>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <script src="js/config.js"></script>
-    <script src="js/register.js"></script>
-
-<div id="pnl-r" class="hidden">
-      <div id="rerr" class="ale ae hidden">Please fill all required fields.</div>
-      <div id="rform">
-        <div class="fr2">
-          <div class="fg"><label class="fl">Full Name *</label><input id="rn" class="fi" placeholder="Your full name"/></div>
-          <div class="fg"><label class="fl">Email * (becomes username)</label><input type="email" id="re" class="fi" placeholder="you@example.com"/></div>
-        </div>
-        <div class="fr2">
-          <div class="fg"><label class="fl">Mobile *</label><input id="rph" class="fi" placeholder="+91 98765 43210"/></div>
-          <div class="fg"><label class="fl">Institute/College</label><input id="ro" class="fi" placeholder="Your institution"/></div>
-        </div>
-        <div class="fr2">
-          <div class="fg"><label class="fl">Degree Pursuing:</label>
-			<select name="degree" id="cars">
-			  <option value="B.Tech./B.E.">B.Tech./B.E.</option>
-			  <option value="M.Tech./M.E.">M.Tech./M.E.</option>
-			  <option value="M.Sc.">M.Sc.</option>
-			  <option value="Others">Others</option>
-			</select>
-		    </div>
-			<div class="fg"><label class="fl">Year of Study:</label>
-			<select name="year" id="year">
-			  <option value="1">I Year</option>
-			  <option value="2">II Year</option>
-			  <option value="3">III Year</option>
-			</select>
-			</div>
-        </div>
-        <div class="fg"><label class="fl">Why would you like to attend? (Max 100 words)</label><textarea id="rs" class="fi" rows="3" placeholder="Why do you want to attend this internship?"></textarea></div>
-		<div class="fg"><label class="fl">What are your expectations? (Max 100 words)</label><textarea id="rs" class="fi" rows="3" placeholder="What do you expect to learn from this internship?"></textarea></div>
-        <div class="fg"><label class="fl">Transaction id?</label><textarea id="rs" class="fi" rows="1" placeholder="Share transaction id here!"></textarea></div>
-		<p class="fsec">📎Please, upload the screenshot of transcation (PDF/JPG/PNG only).</p>
-        <div class="fup" onclick="document.getElementById('fid').click()">
-          <input type="file" id="fid" accept=".pdf,.jpg,.png" onchange="fsel(this,'fidn')"/>
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m6.75 12l-3-3m0 0l-3 3m3-3v6m-1.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
-          <p>Upload, screenshot of transaction.</p><span id="fidn">PDF, JPG or PNG</span>
-        </div>
+    					 <div class="fg">
+							 <label class="fl">Purpose</label>
+							 <textarea id="rs" class="fi" rows="3" placeholder="Why do you want to attend this internship?"></textarea>
+						 </div>
+						<div class="input-group">
+                            <i class="fas fa-transactionid"></i>
+                            <input type="text"
+                                   id="transactionid"
+                                   placeholder="Transaction Id">
+                        </div>
+					<p class="fsec">📎Please, upload the screenshot of transcation (PDF/JPG/PNG only).</p>
+        			<div class="fup" onclick="document.getElementById('fid').click()">
+          			<input type="file" id="fid" accept=".pdf,.jpg,.png" onchange="fsel(this,'fidn')"/>
+          			<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m6.75 12l-3-3m0 0l-3 3m3-3v6m-1.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg>
+          			<p>Upload, screenshot of transaction.</p><span id="fidn">PDF, JPG or PNG</span>
+        			</div>
 		<input type="radio" id="Declaration" name="choice" value="1">
-		<div> <label for="option1">Declaration: By submitting this form, I confirm that the registration fee is non-refundable and I do commit to attend the course in its entirety.</label>
+		<div> <label for="option1">
+			Declaration: By submitting this form, I confirm that the registration fee is non-refundable and 
+			I do commit to attend the course in its entirety. I declare that the information provided above 
+			is true and accurate to the best of my knowledge.</label>
         <button class="bp" style="margin-top:1.2rem" onclick="subReg()">Submit Application →</button>
-		</div>
+		</div>   
+		<button class="modern-btn">
+        	Submit Registration
+		</button>
       <div id="rok" class="hidden" style="text-align:center;padding:2rem 0">
         <div style="width:60px;height:60px;background:var(--okbg);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto .9rem"><svg fill="none" viewBox="0 0 24 24" stroke="var(--ok)" stroke-width="2.5" width="28" height="28"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg></div>
         <h2 style="font-family:'Lora',serif;color:var(--ink);margin-bottom:.4rem">Application Submitted!</h2>
@@ -178,8 +133,14 @@
         <div class="ibox io" style="margin-top:1rem;text-align:left"><strong>Note:</strong> In case of problem if any, please contact Internship Coordinators at hodap@sgsits.ac.in </div>
         <button class="bs" style="margin-top:.9rem" onclick="ltab('l',document.querySelector('.ltab'))">Back to Login</button>
       </div>
-    </div>
-  </div>	
+					</form>
+				</div>
+			</div>
+        </div>
+    </section>
+
+    <script src="js/config.js"></script>
+    <script src="js/register.js"></script>
 <script>
 document.getElementById('regForm')
 .addEventListener('submit', async function(e) {
@@ -203,6 +164,5 @@ document.getElementById('regForm')
     <footer>
         © 2026 Dr JTAndrews | QCMAT Internship Portal | SGSITS Indore
     </footer>
-
 </body>
 </html>
