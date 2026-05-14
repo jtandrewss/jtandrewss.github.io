@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCMAT Internship Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=Lora:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="rstyle.css"/>
+	<link rel="stylesheet" href="css/Qstyle.css"/>
+    <link rel="stylesheet" href="istyle.css">
+  	<link rel="alternate" href="/index.xml" type="application/rss+xml" title="J T Andrews">
+  	<link rel="manifest" href="/index.webmanifest">
+  	<link rel="icon" type="image/png" href="/images/icon-32.png">
+  	<link rel="apple-touch-icon" type="image/png" href="/images/icon-192.png">
+  	<link rel="canonical" href="https://jtandrewss.github.io/">
+	<meta property="twitter:card" content="summary">
+   <meta property="og:site_name" content="J T Andrews">
+  <meta property="og:url" content="https://jtandrewss.github.io/">
+  <meta property="og:title" content="J T Andrews">
+  <meta property="og:description" content=""><meta property="og:image" content="https://jtandrewss.github.io/images/icon-192.png">
+  <meta property="twitter:image" content="https://jtandrewss.github.io/images/icon-192.png"><meta property="og:locale" content="en-us">
+    <meta property="og:updated_time" content="2026-03-24T00:00:00&#12;00:00">
+    <!-- All the relevant styles are stored here -->
+</head>
+<body>
+    <nav class="navbar">
+        <div class="image-row">
+            <img src="images/QCMAT.png" alt="COE QC">
+            <img src="images/SGS-d.png" alt="SGSITS">
+			<img src="images/NQM.png" alt="NQM">
+		    <img src="images/IPA1.png" alt="IPA">
+        </div>
+		<div class="logo">
+            QCMAT Internship Portal
+        </div>
+	     <div class="nav-links">
+			 <a href="index.html">Home</a>
+			 <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>iQCMAT Registration Portal</title>
+
+	<link rel="stylesheet" href="rstyle.css"/>
+	<link rel="stylesheet" href="qstyle.css"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="background-animation"></div>
+
+  <div class="container">
+
+    <div class="glass-card">
+
+      <div class="header">
+        <h1>iQCMAT Registration</h1>
+        <p>
+          Quantum Computing • Quantum Materials • Quantum Algorithms • Technology
+        </p>
+      </div>
+
+      <form id="registrationForm">
+
+        <!-- Name -->
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" name="name" required />
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" name="email" required />
+        </div>
+
+        <!-- Mobile -->
+        <div class="form-group">
+          <label>Mobile Number</label>
+          <input type="tel" name="mobile" pattern="[0-9]{10}" required />
+        </div>
+
+        <!-- College -->
+        <div class="form-group">
+          <label>Name of College</label>
+          <input type="text" name="college" required />
+        </div>
+
+        <!-- Degree -->
+        <div class="form-group">
+          <label>Name of Degree</label>
+          <select name="degree" required>
+            <option value="">Select Degree</option>
+            <option>B.Tech./B.E.</option>
+            <option>M.Tech./M.E.</option>
+            <option>M.Sc.</option>
+            <option>Others</option>
+          </select>
+        </div>
+
+        <!-- Year -->
+        <div class="form-group">
+          <label>Year of Study</label>
+          <select name="year" required>
+            <option value="">Select Year</option>
+            <option>I Year</option>
+            <option>II Year</option>
+            <option>III Year</option>
+          </select>
+        </div>
+
+        <!-- Purpose -->
+        <div class="form-group">
+          <label>Purpose of Attending (Maximum 100 Words)</label>
+
+          <textarea
+            name="purpose"
+            id="purpose"
+            rows="5"
+            maxlength="700"
+            required
+          ></textarea>
+
+          <div class="word-count">
+            Words: <span id="wordCount">0</span>/100
+          </div>
+        </div>
+
+        <!-- Transaction ID -->
+        <div class="form-group">
+          <label>Transaction ID</label>
+          <input type="text" name="transactionId" required />
+        </div>
+
+        <!-- File Upload -->
+        <div class="form-group">
+          <label>Upload Supporting Document</label>
+
+          <input
+            type="file"
+            id="fileUpload"
+            accept=".pdf,.png,.jpg,.jpeg"
+            required
+          />
+
+          <small>
+            Allowed Formats: PDF, PNG, JPG, JPEG
+          </small>
+        </div>
+
+        <!-- Declaration -->
+        <div class="declaration-box">
+
+          <input
+            type="checkbox"
+            id="declaration"
+            required
+          />
+
+          <label for="declaration">
+            Declaration: By submitting this form, I confirm that the registration
+            fee is non-refundable and I do commit to attend the course in its
+            entirety. I declare that the information provided above is true and
+            accurate to the best of my knowledge.
+          </label>
+
+        </div>
+
+        <!-- Submit -->
+        <button
+          type="submit"
+          id="submitBtn"
+          disabled
+        >
+          SUBMIT APPLICATION
+        </button>
+
+      </form>
+
+      <!-- Success Message -->
+      <div id="successMessage" class="success-message">
+
+        <h2>Application Submitted!</h2>
+
+        <p>
+          Dear Student, thank you for your interest in iQCMAT program.
+          Your application is under review.
+        </p>
+
+        <p>
+          Once approved, the admin will email your login credentials
+          to the address you provided.
+        </p>
+
+        <p>
+          <strong>Note:</strong> In case of problem if any, please contact
+          Internship Coordinators at
+          <a href="mailto:hodap@sgsits.ac.in">
+            hodap@sgsits.ac.in
+          </a>
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="rscript.js"></script>
+
+</body>
+</html>
