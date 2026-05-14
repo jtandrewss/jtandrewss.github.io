@@ -5,7 +5,7 @@ const successMessage = document.getElementById("successMessage");
 const purpose = document.getElementById("purpose");
 const wordCount = document.getElementById("wordCount");
 const fileUpload = document.getElementById("fileUpload");
-
+const captchaToken = grecaptcha.getResponse();
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxqeXLNAjCbLt1iculK0ZzshVP0Y6Ue2SWhACWNYBdoE5fK12piASK5y4ATQZEyTr-q/exec";
 
 
@@ -122,6 +122,7 @@ form.addEventListener("submit", async (e) => {
             fileName: file.name,
             mimeType: file.type,
             fileData: base64File
+            captchaToken: captchaToken
 
         };
 
