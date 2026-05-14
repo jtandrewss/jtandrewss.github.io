@@ -316,3 +316,19 @@
             border: 0px solid #ccc;
             border-radius: 0px;
         }
+/* Container for images large */
+        .image-rowL {
+            display: flex;              /* Places items in a row */
+            justify-content: center;    /* Centers them horizontally */
+            align-items: center;        /* Aligns them vertically */
+            gap: 10px;                   /* Space between images */
+            margin-top: 0px;
+        }
+
+/* Make images responsive large */
+        .image-rowL img {
+            max-width: auto;  /* Limit width */
+            height: 80px;      /* Keep aspect ratio */
+            border: 0px solid #ccc;
+            border-radius: 0px;
+        }
