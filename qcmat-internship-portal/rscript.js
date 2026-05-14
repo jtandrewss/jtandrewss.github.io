@@ -8,37 +8,28 @@ const fileUpload = document.getElementById("fileUpload");
 const captchaToken = grecaptcha.getResponse();
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxqeXLNAjCbLt1iculK0ZzshVP0Y6Ue2SWhACWNYBdoE5fK12piASK5y4ATQZEyTr-q/exec";
 
-
 // ------------------------------------
 // WORD COUNT LIMIT
 // ------------------------------------
 
 purpose.addEventListener("input", () => {
-
     let words = purpose.value
         .trim()
         .split(/\s+/)
         .filter(word => word.length > 0);
-
     if (words.length > 40) {
-
         words = words.slice(0, 100);
-
         purpose.value = words.join(" ");
     }
-
     wordCount.textContent = words.length;
-
     validateForm();
 });
-
 
 // ------------------------------------
 // VALIDATE FORM
 // ------------------------------------
 
 function validateForm() {
-
     const name = form.name.value.trim();
     const email = form.email.value.trim();
     const mobile = form.mobile.value.trim();
@@ -47,19 +38,13 @@ function validateForm() {
     const year = form.year.value;
     const purposeText = form.purpose.value.trim();
     const transactionId = form.transactionId.value.trim();
-
     const fileSelected = fileUpload.files.length > 0;
-
     const declarationChecked = declaration.checked;
-
     const words = purposeText
         .split(/\s+/)
         .filter(word => word.length > 0);
-
     const validWordCount = words.length > 0 && words.length <= 100;
-
     const allValid =
-
         name !== "" &&
         email !== "" &&
         mobile !== "" &&
@@ -71,45 +56,29 @@ function validateForm() {
         transactionId !== "" &&
         fileSelected &&
         declarationChecked;
-
     submitBtn.disabled = !allValid;
 }
-
 
 // ------------------------------------
 // EVENT LISTENERS
 // ------------------------------------
-
 form.addEventListener("input", validateForm);
-
 form.addEventListener("change", validateForm);
-
 declaration.addEventListener("change", validateForm);
-
 fileUpload.addEventListener("change", validateForm);
-
 
 // ------------------------------------
 // SUBMIT FORM
 // ------------------------------------
-
 form.addEventListener("submit", async (e) => {
-
     e.preventDefault();
-
     submitBtn.disabled = true;
     submitBtn.innerText = "Submitting...";
-
     const file = fileUpload.files[0];
-
     const reader = new FileReader();
-
     reader.onload = async function () {
-
         const base64File = reader.result.split(",")[1];
-
         const formData = {
-
             name: form.name.value,
             email: form.email.value,
             mobile: form.mobile.value,
@@ -118,53 +87,33 @@ form.addEventListener("submit", async (e) => {
             year: form.year.value,
             purpose: form.purpose.value,
             transactionId: form.transactionId.value,
-
             fileName: file.name,
             mimeType: file.type,
             fileData: base64File
             captchaToken: captchaToken
-
         };
-
         try {
-
             const response = await fetch(SCRIPT_URL, {
-
                 method: "POST",
                 body: JSON.stringify(formData)
-
             });
-
             const result = await response.text();
-
             console.log(result);
-
             form.reset();
-
             submitBtn.disabled = true;
-
             wordCount.textContent = "0";
-
             successMessage.style.display = "block";
-
             window.scrollTo({
                 top: document.body.scrollHeight,
                 behavior: "smooth"
             });
-
         }
-
         catch (error) {
-
             alert("Submission failed. Please try again.");
-
             console.error(error);
         }
-
         submitBtn.innerText = "SUBMIT APPLICATION";
-
     };
-
     reader.readAsDataURL(file);
 
 });
