@@ -5,7 +5,7 @@ const successMessage = document.getElementById("successMessage");
 const purpose = document.getElementById("purpose");
 const wordCount = document.getElementById("wordCount");
 
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyWYnmFYpeTKFc2M9I1xUgTF0b8CFeC2R5MjJtoi1pjX6XC3jhXEtz60Ke-7CX5vBpKvA/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxqeXLNAjCbLt1iculK0ZzshVP0Y6Ue2SWhACWNYBdoE5fK12piASK5y4ATQZEyTr-q/exec";
 
 
 // ------------------------
