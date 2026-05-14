@@ -4,13 +4,14 @@ const declaration = document.getElementById("declaration");
 const successMessage = document.getElementById("successMessage");
 const purpose = document.getElementById("purpose");
 const wordCount = document.getElementById("wordCount");
+const fileUpload = document.getElementById("fileUpload");
 
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxqeXLNAjCbLt1iculK0ZzshVP0Y6Ue2SWhACWNYBdoE5fK12piASK5y4ATQZEyTr-q/exec";
 
 
-// ------------------------
+// ------------------------------------
 // WORD COUNT LIMIT
-// ------------------------
+// ------------------------------------
 
 purpose.addEventListener("input", () => {
 
@@ -19,34 +20,78 @@ purpose.addEventListener("input", () => {
         .split(/\s+/)
         .filter(word => word.length > 0);
 
-    if(words.length > 100){
+    if (words.length > 40) {
 
-        words = words.slice(0,100);
+        words = words.slice(0, 100);
 
         purpose.value = words.join(" ");
     }
 
     wordCount.textContent = words.length;
+
+    validateForm();
 });
 
 
-// ------------------------
-// ENABLE / DISABLE BUTTON
-// ------------------------
+// ------------------------------------
+// VALIDATE FORM
+// ------------------------------------
 
-form.addEventListener("input", validateForm);
+function validateForm() {
 
-function validateForm(){
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const mobile = form.mobile.value.trim();
+    const college = form.college.value.trim();
+    const degree = form.degree.value;
+    const year = form.year.value;
+    const purposeText = form.purpose.value.trim();
+    const transactionId = form.transactionId.value.trim();
 
-    const allFilled = form.checkValidity();
+    const fileSelected = fileUpload.files.length > 0;
 
-    submitBtn.disabled = !allFilled;
+    const declarationChecked = declaration.checked;
+
+    const words = purposeText
+        .split(/\s+/)
+        .filter(word => word.length > 0);
+
+    const validWordCount = words.length > 0 && words.length <= 100;
+
+    const allValid =
+
+        name !== "" &&
+        email !== "" &&
+        mobile !== "" &&
+        college !== "" &&
+        degree !== "" &&
+        year !== "" &&
+        purposeText !== "" &&
+        validWordCount &&
+        transactionId !== "" &&
+        fileSelected &&
+        declarationChecked;
+
+    submitBtn.disabled = !allValid;
 }
 
 
-// ------------------------
+// ------------------------------------
+// EVENT LISTENERS
+// ------------------------------------
+
+form.addEventListener("input", validateForm);
+
+form.addEventListener("change", validateForm);
+
+declaration.addEventListener("change", validateForm);
+
+fileUpload.addEventListener("change", validateForm);
+
+
+// ------------------------------------
 // SUBMIT FORM
-// ------------------------
+// ------------------------------------
 
 form.addEventListener("submit", async (e) => {
 
@@ -55,13 +100,11 @@ form.addEventListener("submit", async (e) => {
     submitBtn.disabled = true;
     submitBtn.innerText = "Submitting...";
 
-    const fileInput = document.getElementById("fileUpload");
-
-    const file = fileInput.files[0];
+    const file = fileUpload.files[0];
 
     const reader = new FileReader();
 
-    reader.onload = async function(){
+    reader.onload = async function () {
 
         const base64File = reader.result.split(",")[1];
 
@@ -82,12 +125,11 @@ form.addEventListener("submit", async (e) => {
 
         };
 
-        try{
+        try {
 
             const response = await fetch(SCRIPT_URL, {
 
                 method: "POST",
-
                 body: JSON.stringify(formData)
 
             });
@@ -100,6 +142,8 @@ form.addEventListener("submit", async (e) => {
 
             submitBtn.disabled = true;
 
+            wordCount.textContent = "0";
+
             successMessage.style.display = "block";
 
             window.scrollTo({
@@ -109,7 +153,7 @@ form.addEventListener("submit", async (e) => {
 
         }
 
-        catch(error){
+        catch (error) {
 
             alert("Submission failed. Please try again.");
 
