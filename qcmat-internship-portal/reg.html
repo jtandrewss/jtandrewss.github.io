@@ -31,7 +31,6 @@
 <!-- Container for the header -->
   <div id="header-container"></div>
   <script src="js/load-snippets.js"></script>
-
   <div class="background-animation"></div>
   <div class="container">
     <div class="glass-card">
@@ -41,9 +40,7 @@
           Quantum Computing • Quantum Materials • Quantum Algorithms • Technology
         </p>
       </div>
-
       <form id="registrationForm">
-
         <!-- Name -->
         <div class="form-group">
           <label>Full Name</label>
@@ -94,15 +91,7 @@
         <!-- Purpose -->
         <div class="form-group">
           <label>Purpose of Attending (Maximum 100 Words)</label>
-
-          <textarea
-            name="purpose"
-            id="purpose"
-            rows="5"
-            maxlength="700"
-            required
-          ></textarea>
-
+          <textarea name="purpose"  id="purpose" rows="5" maxlength="700" required></textarea>
           <div class="word-count">
             Words: <span id="wordCount">0</span>/100
           </div>
@@ -117,14 +106,7 @@
         <!-- File Upload -->
         <div class="form-group">
           <label>Upload Supporting Document</label>
-
-          <input
-            type="file"
-            id="fileUpload"
-            accept=".pdf,.png,.jpg,.jpeg"
-            required
-          />
-
+          <input type="file"  id="fileUpload" accept=".pdf,.png,.jpg,.jpeg" required />
           <small>
             Allowed Formats: PDF, PNG, JPG, JPEG
           </small>
@@ -132,51 +114,35 @@
 
         <!-- Declaration -->
         <div class="declaration-box">
-
-          <input
-            type="checkbox"
-            id="declaration"
-            required
-          />
-
-          <label for="declaration">
+          <input type="checkbox" id="declaration" required />          
+			<label for="declaration">
             Declaration: By submitting this form, I confirm that the registration
             fee is non-refundable and I do commit to attend the course in its
             entirety. I declare that the information provided above is true and
             accurate to the best of my knowledge.
-          </label>
-
+          	</label>
         </div>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<div class="g-recaptcha"
      data-sitekey="6LeVnuksAAAAAFeOHu555hD4ArhVTlAURjAViV0N">
 	</div>
         <!-- Submit -->
-        <button
-          type="submit"
-          id="submitBtn"
-          disabled
-        >
+        <button  type="submit"  id="submitBtn"  disabled >
           SUBMIT APPLICATION
         </button>
-
       </form>
 
       <!-- Success Message -->
       <div id="successMessage" class="success-message">
-
         <h2>Application Submitted!</h2>
-
         <p>
           Dear Student, thank you for your interest in iQCMAT program.
           Your application is under review.
         </p>
-
         <p>
           Once approved, the admin will email your login credentials
           to the address you provided.
         </p>
-
         <p>
           <strong>Note:</strong> In case of problem if any, please contact
           Internship Coordinators at
@@ -184,14 +150,9 @@
             hodap@sgsits.ac.in
           </a>
         </p>
-
       </div>
-
     </div>
-
   </div>
-
-  <script src="rscript.js"></script>
-
+ <script src="rscript.js"></script>
 </body>
 </html>
