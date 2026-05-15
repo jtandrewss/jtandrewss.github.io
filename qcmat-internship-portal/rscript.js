@@ -166,7 +166,7 @@ form.addEventListener("submit", async (e) => {
 
             console.error(error);
 
-            alert("Submission failed.");
+            alert("Submission failed. Check all entries and submit again or mail to hodap@sgsits.ac.in");
         }
 
         submitBtn.innerText = "SUBMIT APPLICATION";
