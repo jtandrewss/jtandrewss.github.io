@@ -1,4 +1,4 @@
-const APPS_SCRIPT_WEB_APP_URL = 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+const APPS_SCRIPT_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbx3hwIk-WSltlGTjlZv3L9EZDIU7b23byD8SqETHvQNsmofYQU5YFnIt0Kgdo4OyKMo/exec';
 
 const form = document.getElementById('registrationForm');
 const submitBtn = document.getElementById('submitBtn');
