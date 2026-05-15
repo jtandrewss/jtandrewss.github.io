@@ -122,6 +122,7 @@ form.addEventListener("submit", async (e) => {
         };
 
         try {
+            console.log(SCRIPT_URL);
             const response = await fetch(SCRIPT_URL, {
                 method: "POST",
                 headers: {
