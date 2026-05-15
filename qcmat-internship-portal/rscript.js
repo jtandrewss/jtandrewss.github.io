@@ -128,6 +128,11 @@ form.addEventListener("submit", async (e) => {
             const response = await fetch(SCRIPT_URL, {
 
                 method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
                 body: JSON.stringify(formData)
 
             });
@@ -136,29 +141,37 @@ form.addEventListener("submit", async (e) => {
 
             console.log(result);
 
-            form.reset();
+            if(result === "Success"){
 
-            submitBtn.disabled = true;
+                form.reset();
 
-            wordCount.textContent = "0";
+                wordCount.textContent = "0";
 
-            successMessage.style.display = "block";
+                successMessage.style.display = "block";
 
-            window.scrollTo({
-                top: document.body.scrollHeight,
-                behavior: "smooth"
-            });
+                window.scrollTo({
+                    top: document.body.scrollHeight,
+                    behavior: "smooth"
+                });
+
+            }
+            else{
+
+                alert("Server Error:\n" + result);
+            }
 
         }
 
         catch (error) {
 
-            alert("Submission failed. Please try again.");
-
             console.error(error);
+
+            alert("Submission failed.");
         }
 
         submitBtn.innerText = "SUBMIT APPLICATION";
+
+        submitBtn.disabled = true;
 
     };
 
