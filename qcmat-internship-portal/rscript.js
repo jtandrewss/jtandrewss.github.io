@@ -5,8 +5,8 @@ const successMessage = document.getElementById("successMessage");
 const purpose = document.getElementById("purpose");
 const wordCount = document.getElementById("wordCount");
 const fileUpload = document.getElementById("fileUpload");
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxqeXLNAjCbLt1iculK0ZzshVP0Y6Ue2SWhACWNYBdoE5fK12piASK5y4ATQZEyTr-q/exec";
-                    
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwQvuinoYJA2Ld5IDeHC3vh7PpvrcYGQMXmZeebX8_MtjzOwidBcY2qbhPNjhyWnlIj/exec";
+
 // ------------------------------------
 // WORD COUNT LIMIT
 // ------------------------------------
