@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iQCMAT Event Registration</title>
+  <meta name="description" content="Registration form for the iQCMAT program." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./astyle.css" />
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="brand-wrap">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" role="img" aria-label="iQCMAT logo">
+          <rect x="8" y="8" width="48" height="48" rx="16" fill="none" stroke="currentColor" stroke-width="4"></rect>
+          <path d="M20 32h24M32 20v24" stroke="currentColor" stroke-width="4" stroke-linecap="round"></path>
+          <circle cx="32" cy="32" r="6" fill="currentColor"></circle>
+        </svg>
+      </div>
+      <div>
+        <p class="eyebrow">Registration Portal</p>
+        <h1>iQCMAT Event Registration</h1>
+      </div>
+    </div>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </header>
+
+  <main id="main-content" class="page-shell">
+    <section class="intro-card">
+      <p class="kicker">Secure application form</p>
+      <p>
+        Complete all required details, upload your supporting document, verify the CAPTCHA,
+        and submit your application for review.
+      </p>
+    </section>
+
+    <section class="form-card" aria-labelledby="form-title">
+      <div class="section-head">
+        <h2 id="form-title">Application details</h2>
+        <p>All fields are mandatory. The submit button activates only after successful validation.</p>
+      </div>
+
+      <form id="registrationForm" class="registration-form" novalidate>
+        <div class="grid two-col">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" maxlength="120" required />
+            <small class="error" data-error-for="name"></small>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" maxlength="120" required />
+            <small class="error" data-error-for="email"></small>
+          </div>
+
+          <div class="field">
+            <label for="mobile">Mobile number</label>
+            <input id="mobile" name="mobile" type="tel" inputmode="numeric" pattern="[0-9]{10,15}" maxlength="15" required />
+            <small class="hint">Enter 10 to 15 digits.</small>
+            <small class="error" data-error-for="mobile"></small>
+          </div>
+
+          <div class="field">
+            <label for="college">Name of College</label>
+            <input id="college" name="college" type="text" maxlength="180" required />
+            <small class="error" data-error-for="college"></small>
+          </div>
+
+          <div class="field">
+            <label for="degree">Name of Degree</label>
+            <select id="degree" name="degree" required>
+              <option value="">Select degree</option>
+              <option value="B.Tech./B.E.">B.Tech./B.E.</option>
+              <option value="M.Tech./M.E.">M.Tech./M.E.</option>
+              <option value="M.Sc.">M.Sc.</option>
+              <option value="Others">Others</option>
+            </select>
+            <small class="error" data-error-for="degree"></small>
+          </div>
+
+          <div class="field">
+            <label for="yearOfStudy">Year of Study</label>
+            <select id="yearOfStudy" name="yearOfStudy" required>
+              <option value="">Select year</option>
+              <option value="I Year">I Year</option>
+              <option value="II Year">II Year</option>
+              <option value="III Year">III Year</option>
+            </select>
+            <small class="error" data-error-for="yearOfStudy"></small>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="purpose">Purpose of attending</label>
+          <textarea id="purpose" name="purpose" rows="4" required></textarea>
+          <div class="meta-row">
+            <small class="hint">Maximum 100 words.</small>
+            <small id="wordCounter" class="counter">0 / 100 words</small>
+          </div>
+          <small class="error" data-error-for="purpose"></small>
+        </div>
+
+        <div class="grid two-col">
+          <div class="field">
+            <label for="transactionId">Transaction Id</label>
+            <input id="transactionId" name="transactionId" type="text" maxlength="80" required />
+            <small class="error" data-error-for="transactionId"></small>
+          </div>
+
+          <div class="field">
+            <label for="document">Upload document</label>
+            <input id="document" name="document" type="file" accept=".pdf,.png,.jpg,.jpeg" required />
+            <small class="hint">Allowed formats: PDF, PNG, JPG, JPEG.</small>
+            <small class="error" data-error-for="document"></small>
+          </div>
+        </div>
+
+        <fieldset class="declaration-box">
+          <legend>Declaration</legend>
+          <label class="radio-wrap" for="declarationAccepted">
+            <input id="declarationAccepted" name="declarationAccepted" type="radio" value="Yes" required />
+            <span>
+              By submitting this form, I confirm that the registration fee is non-refundable and I do commit to attend the course in its entirety. I declare that the information provided above is true and accurate to the best of my knowledge.
+            </span>
+          </label>
+          <small class="error" data-error-for="declarationAccepted"></small>
+        </fieldset>
+
+        <div class="captcha-wrap">
+          <div class="g-recaptcha" data-sitekey="6LeVnuksAAAAAFeOHu555hD4ArhVTlAURjAViV0N"></div>
+          <small class="error" data-error-for="captcha"></small>
+        </div>
+
+        <div class="actions">
+          <button id="submitBtn" class="submit-btn" type="submit" disabled>SUBMIT APPLICATION</button>
+          <p id="formStatus" class="form-status" aria-live="polite"></p>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
