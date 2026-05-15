@@ -24,60 +24,56 @@
     <link rel="stylesheet" href="istyle.css">
 </head>
 <body>
-    <!-- Container for the header -->
+<!-- Container for the header -->
   <div id="header-container"></div>
   <script src="js/load-snippets.js"></script>
 
- <div class="container mt-5">
-  <h2>
-    QCMAT Internship Participant Login
-  </h2>
-</div>
+  <div class="background-animation"></div>
+  <div class="container">
+    <div class="glass-card">
+      <div class="header">
+        <h1>iQCMAT Login</h1>
+        <p>
+                    Access your internship dashboard,
+                    attendance, evaluations and certificates.
+        </p>
+      </div>
 <section class="form-page">
 
         <div class="login-wrapper">
-
             <div class="glass-form login-form">
-
                 <div class="login-icon">
                     <i class="fas fa-user-shield"></i>
                 </div>
-
-                <h2>
-                    Participant Login
-                </h2>
-
-                <p class="login-subtitle">
-                    Access your internship dashboard,
-                    attendance, evaluations and certificates.
-                </p>
-
-                <div class="input-group">
-                    <i class="fas fa-envelope"></i>
-                    <input type="email"
-                           id="email"
-                           placeholder="Email Address">
-                </div>
-
-                <div class="input-group">
-                    <i class="fas fa-lock"></i>
-                    <input type="password"
-                           id="password"
-                           placeholder="Password">
-                </div>
-
-                <button class="modern-btn"
-                        onclick="login()">
-                    Login to Portal
-                </button>
-
-            </div>
-
+<form id="Login">
+ 	<!-- Name -->
+        <div class="form-group">
+          <label>Userid (email)</label>
+            <input type="email"  id="email" placeholder="Email Address">
         </div>
+ 	<!-- Name -->
+        <div class="form-group">
+          <label>Userid (email)</label>
+                    <i class="fas fa-lock"></i>  <input type="password" id="password"  placeholder="Password">
+        </div>
+	
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	<div class="g-recaptcha" data-sitekey="6LeVnuksAAAAAFeOHu555hD4ArhVTlAURjAViV0N"></div>
+        <!-- Submit -->
+        <button type="submit" class="modern-btn" onclick="login()" id="submitBtn"
+          disabled
+        >
+          LOGIN TO PORTAL
+        </button>
 
+      </form>
+            </div>
+        </div>
     </section>
 
     <script src="js/config.js"></script>
+		 <script src="rscript.js"></script>
+
 
     <script>
 
