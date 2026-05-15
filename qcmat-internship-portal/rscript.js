@@ -116,65 +116,40 @@ form.addEventListener("submit", async (e) => {
             year: form.year.value,
             purpose: form.purpose.value,
             transactionId: form.transactionId.value,
-
             fileName: file.name,
             mimeType: file.type,
             fileData: base64File
-
         };
 
         try {
-
             const response = await fetch(SCRIPT_URL, {
-
                 method: "POST",
-
                 headers: {
                     "Content-Type": "application/json"
                 },
-
                 body: JSON.stringify(formData)
-
             });
-
             const result = await response.text();
-
             console.log(result);
-
             if(result === "Success"){
-
                 form.reset();
-
                 wordCount.textContent = "0";
-
                 successMessage.style.display = "block";
-
                 window.scrollTo({
                     top: document.body.scrollHeight,
                     behavior: "smooth"
                 });
-
             }
             else{
-
                 alert("Server Error:\n" + result);
             }
-
         }
-
         catch (error) {
-
             console.error(error);
-
             alert("Submission failed. Check all entries and submit again or mail to hodap@sgsits.ac.in");
         }
-
         submitBtn.innerText = "SUBMIT APPLICATION";
-
         submitBtn.disabled = true;
-
     };
-
     reader.readAsDataURL(file);
-
 });
