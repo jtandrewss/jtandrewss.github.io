@@ -316,3 +316,15 @@
             border: 0px solid #ccc;
             border-radius: 0px;
         }
+
+/* Blinking text style */
+.blink-red {
+  color: red; /* Sets the text color to red */
+  animation: blinker 1s linear infinite; /* Runs the blinker animation infinitely */
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0; /* Makes the text invisible halfway through the cycle */
+  }
+}
